@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${award.time ? `<p class="text-sm text-gray-500 font-medium mt-1"><i class="fa-regular fa-calendar-days mr-1"></i> ${award.time}</p>` : ''}
                     
                     <!-- Link if exists -->
-                    ${award.link ? `<a href="${award.link}" target="_blank" class="mt-2 inline-block text-[#B5BAFF] hover:underline text-sm"><i class="fa-solid fa-link"></i> Xem minh chứng</a>` : ''}
+                    ${award.link ? `<a href="${award.link}" target="_blank" class="mt-2 inline-block text-[#9B8EC7] hover:underline text-sm"><i class="fa-solid fa-link"></i> Xem minh chứng</a>` : ''}
 
                     <!-- Hover Image Popup -->
                     ${award.img ? `

@@ -80,7 +80,7 @@ projects.forEach((project, index) => {
     htmlContent = htmlContent.replace(/<pre><code([^>]*)>/g, '<pre class="bg-gray-50 p-4 rounded-lg overflow-x-auto text-sm font-mono text-gray-800 my-6 border border-gray-200"><code$1>');
 
     // Links
-    htmlContent = htmlContent.replace(/<a href="([^"]+)">/g, '<a href="$1" target="_blank" class="text-[#B5BAFF] hover:underline">');
+    htmlContent = htmlContent.replace(/<a href="([^"]+)">/g, '<a href="$1" target="_blank" class="text-[#9B8EC7] hover:underline">');
 
     // Replace Title & Tools
     let projectHtml = templateHtml.replace('Điền tên dự án vào đây', project.title);
