@@ -17,9 +17,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#4A3B7A',
-                        accent: '#ffcc00', // yellow color for buttons if needed
+                        primary: '#B5BAFF',
+                        secondary: '#B5BAFF',
+                        accent: '#ffcc00',
                         dark: '#333333',
                         light: '#f9f9f9',
                     },
@@ -33,33 +33,33 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans text-dark antialiased bg-white selection:bg-primary selection:text-white flex flex-col min-h-screen">
+<body class="font-sans text-dark antialiased bg-white selection:bg-primary selection:text-gray-900 flex flex-col min-h-screen">
 
     <!-- Navbar -->
-    <nav class="w-full bg-primary text-white py-6 px-4 md:px-12 fixed top-0 z-50 shadow-md transition-all duration-300" id="navbar">
+    <nav class="w-full bg-primary text-gray-900 py-6 px-4 md:px-12 fixed top-0 z-50 shadow-md transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-8">
-            <a href="#" class="text-2xl font-bold tracking-wider hover:text-gray-300 transition">TRANG LÊ</a>
+            <a href="#" class="text-2xl font-bold tracking-wider hover:text-gray-600 transition">TRANG LÊ</a>
             
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wide flex-wrap">
-                <li><a href="#about" class="hover:text-gray-300 transition">Giới thiệu</a></li>
-                <li><a href="#skills" class="hover:text-gray-300 transition">Kỹ năng</a></li>
-                <li><a href="#experience" class="hover:text-gray-300 transition">Kinh nghiệm</a></li>
-                <li><a href="#projects" class="hover:text-gray-300 transition">Dự án</a></li>
-                <li><a href="#certificates" class="hover:text-gray-300 transition">Chứng chỉ</a></li>
-                <li><a href="#contact" class="hover:text-gray-300 transition">Liên hệ</a></li>
+                <li><a href="#about" class="hover:text-gray-600 transition">Giới thiệu</a></li>
+                <li><a href="#skills" class="hover:text-gray-600 transition">Kỹ năng</a></li>
+                <li><a href="#experience" class="hover:text-gray-600 transition">Kinh nghiệm</a></li>
+                <li><a href="#projects" class="hover:text-gray-600 transition">Dự án</a></li>
+                <li><a href="#certificates" class="hover:text-gray-600 transition">Chứng chỉ</a></li>
+                <li><a href="#contact" class="hover:text-gray-600 transition">Liên hệ</a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn">
+            <button class="md:hidden text-gray-900 text-2xl" id="mobile-menu-btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-primary text-white z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
-        <ul class="flex flex-col space-y-6 text-center text-xl text-white font-medium uppercase tracking-wide">
+    <div id="mobile-menu" class="fixed inset-0 bg-primary text-gray-900 z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        <ul class="flex flex-col space-y-6 text-center text-xl text-gray-900 font-medium uppercase tracking-wide">
             <li><a href="#about" class="mobile-link">Giới thiệu</a></li>
             <li><a href="#skills" class="mobile-link">Kỹ năng</a></li>
             <li><a href="#experience" class="mobile-link">Kinh nghiệm</a></li>
@@ -72,7 +72,7 @@
     <!-- Main Content Wrapper to push footer down -->
     <main class="flex-grow pt-20"> <!-- pt-20 to account for fixed navbar -->
         <!-- Hero Section -->
-        <section id="hero" class="relative bg-gradient-to-br from-secondary to-primary text-white py-24 md:py-32 lg:py-40 px-4 flex items-center justify-center overflow-hidden">
+        <section id="hero" class="relative bg-gradient-to-br from-[#9BA0F5] to-primary text-gray-900 py-24 md:py-32 lg:py-40 px-4 flex items-center justify-center overflow-hidden">
             <!-- Background Decoration Pattern (Optional subtle overlay) -->
             <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
             
@@ -87,9 +87,9 @@
                 <!-- Text Content -->
                 <div class="text-center md:text-left flex flex-col justify-center">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                        Xin chào, tôi là <br class="hidden md:block"> <span class="text-white">Lê Hà Trang!</span>
+                        Xin chào, tôi là <br class="hidden md:block"> <span class="text-gray-900">Lê Hà Trang!</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-light">
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-light">
                         Sinh viên năm cuối ngành Phân tích dữ liệu Kinh Doanh <br>
                         Trường Quốc Tế - Đại Học Quốc Gia Hà Nội
                     </p>
@@ -98,8 +98,8 @@
                         <span>Kết nối với tôi</span>
                         <i class="fa-solid fa-chevron-right text-xs"></i>
                         <div class="flex space-x-3 ml-2 text-lg">
-                            <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-gray-300 transition transform hover:-translate-y-1"><i class="fa-brands fa-github"></i></a>
-                            <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-gray-300 transition transform hover:-translate-y-1"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-gray-600 transition transform hover:-translate-y-1"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-gray-600 transition transform hover:-translate-y-1"><i class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
 
         <!-- Placeholder for About Me (to show scrolling) -->
         <section id="about" class="py-20 px-4 max-w-5xl mx-auto text-center">
-            <h2 class="text-primary text-3xl font-bold mb-6 uppercase tracking-wider">Tôi là ai?</h2>
+            <h2 class="text-[#B5BAFF] text-3xl font-bold mb-6 uppercase tracking-wider">Tôi là ai?</h2>
             <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
                 Em là một người ham học hỏi, có trách nhiệm trong công việc và đam mê phân tích dữ liệu đặc biệt trong lĩnh vực tài chính. Qua các môn học trên trường, em có kinh nghiệm phân tích báo cáo tài chính và có nền tảng tốt về phân tích và trực quan hóa dữ liệu, xây dựng mô hình học máy, học sâu. Em luôn sẵn sàng đón nhận những thử thách mới để không ngừng trau dồi chuyên môn thông qua các dự án thực tế và đóng góp trực tiếp vào sự phát triển của doanh nghiệp.
             </p>
@@ -172,7 +172,7 @@
                     <h3 class="text-xl font-bold text-dark">Công ty Cổ phần Chứng khoán SSI</h3>
                     <p class="text-sm font-semibold text-primary mb-2">Thực tập sinh phân tích dữ liệu và nghiên cứu sản phẩm | Tháng 4/2026 - Tháng 5/2026</p>
                     <p class="text-gray-600">
-                        Nghiên cứu và phát triển chatbot về mô hình kinh doanh của doanh nghiệp. <a href="https://fpt-ai-chat-client.pages.dev/" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Xem sản phẩm</a>
+                        Nghiên cứu và phát triển chatbot về mô hình kinh doanh của doanh nghiệp. <a href="https://fpt-ai-chat-client.pages.dev/" target="_blank" class="text-[#B5BAFF] hover:underline"><i class="fa-solid fa-link text-sm"></i> Xem sản phẩm</a>
                     </p>
                 </div>
 
@@ -183,8 +183,8 @@
                     <p class="text-sm font-semibold text-primary mb-2">Thực tập sinh phân tích đầu tư | Tháng 12/2025 - Tháng 3/2026</p>
                     <ul class="text-gray-600 list-disc ml-5 space-y-1">
                         <li>Sử dụng phân tích TA để đánh giá và lọc các cổ phiếu tiềm năng.</li>
-                        <li>Làm báo cáo phân tích cơ bản và kỹ thuật một doanh nghiệp. <a href="https://docs.google.com/document/d/1iCmM-dSSmOnjXOBiFnhH1BcVNieru00kzaTlZndlfkE/edit?usp=sharing" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Link báo cáo</a></li>
-                        <li>Triển khai làm kênh phân tích đầu tư đạt 21 đăng ký/tháng. <a href="https://www.youtube.com/@TLinvest-tl21" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Kênh Youtube</a></li>
+                        <li>Làm báo cáo phân tích cơ bản và kỹ thuật một doanh nghiệp. <a href="https://docs.google.com/document/d/1iCmM-dSSmOnjXOBiFnhH1BcVNieru00kzaTlZndlfkE/edit?usp=sharing" target="_blank" class="text-[#B5BAFF] hover:underline"><i class="fa-solid fa-link text-sm"></i> Link báo cáo</a></li>
+                        <li>Triển khai làm kênh phân tích đầu tư đạt 21 đăng ký/tháng. <a href="https://www.youtube.com/@TLinvest-tl21" target="_blank" class="text-[#B5BAFF] hover:underline"><i class="fa-solid fa-link text-sm"></i> Kênh Youtube</a></li>
                     </ul>
                 </div>
             </div>
@@ -226,14 +226,14 @@
 
 
     <!-- Footer -->
-    <footer class="bg-primary text-white py-8 px-4">
+    <footer class="bg-primary text-gray-900 py-8 px-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm text-gray-300">
+            <p class="text-sm text-gray-800">
                 &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
             </p>
             <div class="flex space-x-4 text-lg">
-                <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-white text-gray-300 transition"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-white text-gray-300 transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-gray-900 text-gray-700 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-gray-900 text-gray-700 transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </footer>

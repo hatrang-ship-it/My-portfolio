@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <h3 class="font-bold text-xl text-dark mb-3 group-hover:text-primary transition-colors">${project.title}</h3>
-                    <p class="text-sm font-semibold text-secondary mt-auto"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>${project.tools}</p>
+                    <p class="text-sm font-semibold text-primary mt-auto"><i class="fa-solid fa-screwdriver-wrench mr-2"></i>${project.tools}</p>
                 </div>
             `;
             projectsContainer.appendChild(card);
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${award.time ? `<p class="text-sm text-gray-500 font-medium mt-1"><i class="fa-regular fa-calendar-days mr-1"></i> ${award.time}</p>` : ''}
                     
                     <!-- Link if exists -->
-                    ${award.link ? `<a href="${award.link}" target="_blank" class="mt-2 inline-block text-blue-500 hover:underline text-sm"><i class="fa-solid fa-link"></i> Xem minh chứng</a>` : ''}
+                    ${award.link ? `<a href="${award.link}" target="_blank" class="mt-2 inline-block text-[#B5BAFF] hover:underline text-sm"><i class="fa-solid fa-link"></i> Xem minh chứng</a>` : ''}
 
                     <!-- Hover Image Popup -->
                     ${award.img ? `
