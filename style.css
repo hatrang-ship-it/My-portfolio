@@ -9,7 +9,7 @@ body {
 
 /* Navbar background transition on scroll */
 .navbar-scrolled {
-    background-color: rgba(168, 188, 250, 0.95);
+    background-color: rgba(37, 99, 235, 0.95);
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     padding-top: 1rem !important;
@@ -30,7 +30,7 @@ body {
     background: #f1f1f1; 
 }
 ::-webkit-scrollbar-thumb {
-    background: #a8bcfa; 
+    background: #2563eb; 
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -45,11 +45,11 @@ body {
     background: transparent; 
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #93c5fd; 
+    background: #cbd5e1; 
     border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #60a5fa; 
+    background: #94a3b8; 
 }
 
 /* Modal Markdown Content Customization (Overrides for prose if needed) */
