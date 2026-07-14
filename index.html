@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Hà Trang - Portfolio</title>
+    <!-- Google Fonts -->
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/google-sans');
+    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS & Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5b4282',
+                        secondary: '#4A3B7A',
+                        accent: '#ffcc00', // yellow color for buttons if needed
+                        dark: '#333333',
+                        light: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans Text"', '"Google Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-dark antialiased bg-white selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="w-full bg-primary text-white py-6 px-4 md:px-12 fixed top-0 z-50 shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center gap-8">
+            <a href="#" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wide flex-wrap">
+                <li><a href="#about" class="hover:text-gray-300 transition">Giới thiệu</a></li>
+                <li><a href="#skills" class="hover:text-gray-300 transition">Kỹ năng</a></li>
+                <li><a href="#experience" class="hover:text-gray-300 transition">Kinh nghiệm</a></li>
+                <li><a href="#projects" class="hover:text-gray-300 transition">Dự án</a></li>
+                <li><a href="#certificates" class="hover:text-gray-300 transition">Chứng chỉ</a></li>
+                <li><a href="#contact" class="hover:text-gray-300 transition">Liên hệ</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        <ul class="flex flex-col space-y-6 text-center text-xl text-white font-medium uppercase tracking-wide">
+            <li><a href="#about" class="mobile-link">Giới thiệu</a></li>
+            <li><a href="#skills" class="mobile-link">Kỹ năng</a></li>
+            <li><a href="#experience" class="mobile-link">Kinh nghiệm</a></li>
+            <li><a href="#projects" class="mobile-link">Dự án</a></li>
+            <li><a href="#certificates" class="mobile-link">Chứng chỉ</a></li>
+            <li><a href="#contact" class="mobile-link">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Wrapper to push footer down -->
+    <main class="flex-grow pt-20"> <!-- pt-20 to account for fixed navbar -->
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gradient-to-br from-secondary to-primary text-white py-24 md:py-32 lg:py-40 px-4 flex items-center justify-center overflow-hidden">
+            <!-- Background Decoration Pattern (Optional subtle overlay) -->
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+            
+            <div class="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 relative z-10">
+                <!-- Avatar -->
+                <div class="relative group">
+                    <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transition-transform duration-500 hover:scale-105">
+                        <img src="assets/avatar.jpg" alt="Lê Hà Trang" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/250'">
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="text-center md:text-left flex flex-col justify-center">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Xin chào, tôi là <br class="hidden md:block"> <span class="text-white">Lê Hà Trang!</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-light">
+                        Sinh viên năm cuối ngành Phân tích dữ liệu Kinh Doanh <br>
+                        Trường Quốc Tế - Đại Học Quốc Gia Hà Nội
+                    </p>
+                    
+                    <div class="flex items-center justify-center md:justify-start gap-4 uppercase text-sm font-semibold tracking-wider">
+                        <span>Kết nối với tôi</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                        <div class="flex space-x-3 ml-2 text-lg">
+                            <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-gray-300 transition transform hover:-translate-y-1"><i class="fa-brands fa-github"></i></a>
+                            <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-gray-300 transition transform hover:-translate-y-1"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder for About Me (to show scrolling) -->
+        <section id="about" class="py-20 px-4 max-w-5xl mx-auto text-center">
+            <h2 class="text-primary text-3xl font-bold mb-6 uppercase tracking-wider">Tôi là ai?</h2>
+            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                Em là một người ham học hỏi, có trách nhiệm trong công việc và đam mê phân tích dữ liệu đặc biệt trong lĩnh vực tài chính. Qua các môn học trên trường, em có kinh nghiệm phân tích báo cáo tài chính và có nền tảng tốt về phân tích và trực quan hóa dữ liệu, xây dựng mô hình học máy, học sâu. Em luôn sẵn sàng đón nhận những thử thách mới để không ngừng trau dồi chuyên môn thông qua các dự án thực tế và đóng góp trực tiếp vào sự phát triển của doanh nghiệp.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 bg-light">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Kỹ năng</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Soft Skills -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-primary hover:shadow-md transition transform hover:-translate-y-1">
+                        <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-users"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Kỹ năng mềm</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Thuyết trình</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Làm việc nhóm</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Quản lý thời gian</li>
+                        </ul>
+                    </div>
+                    <!-- Languages -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-secondary hover:shadow-md transition transform hover:-translate-y-1">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-language"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Ngoại ngữ</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Giao tiếp cơ bản</li>
+                            <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Đọc tài liệu tốt</li>
+                        </ul>
+                    </div>
+                    <!-- Programming -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-primary hover:shadow-md transition transform hover:-translate-y-1">
+                        <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Lập trình</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fa-brands fa-python text-blue-500 mr-2"></i>Python</li>
+                            <li><i class="fa-solid fa-database text-yellow-500 mr-2"></i>SQL</li>
+                            <li><i class="fa-solid fa-r text-blue-700 mr-2"></i>R</li>
+                        </ul>
+                    </div>
+                    <!-- Tools -->
+                    <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-secondary hover:shadow-md transition transform hover:-translate-y-1">
+                        <div class="text-secondary text-3xl mb-4"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Công cụ</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><i class="fa-solid fa-chart-simple text-blue-400 mr-2"></i>Tableau</li>
+                            <li><i class="fa-solid fa-chart-line text-yellow-600 mr-2"></i>Power BI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-4 max-w-5xl mx-auto">
+            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Kinh nghiệm làm việc</h2>
+            <div class="relative border-l-2 border-primary ml-4 md:ml-0 md:mx-auto md:w-2/3">
+                
+                <!-- Experience 1 -->
+                <div class="mb-10 ml-8 relative group">
+                    <span class="absolute -left-[41px] top-1 bg-white border-4 border-primary w-5 h-5 rounded-full group-hover:bg-primary transition-colors duration-300"></span>
+                    <h3 class="text-xl font-bold text-dark">Công ty Cổ phần Chứng khoán SSI</h3>
+                    <p class="text-sm font-semibold text-primary mb-2">Thực tập sinh phân tích dữ liệu và nghiên cứu sản phẩm | Tháng 4/2026 - Tháng 5/2026</p>
+                    <p class="text-gray-600">
+                        Nghiên cứu và phát triển chatbot về mô hình kinh doanh của doanh nghiệp. <a href="https://fpt-ai-chat-client.pages.dev/" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Xem sản phẩm</a>
+                    </p>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="mb-10 ml-8 relative group">
+                    <span class="absolute -left-[41px] top-1 bg-white border-4 border-primary w-5 h-5 rounded-full group-hover:bg-primary transition-colors duration-300"></span>
+                    <h3 class="text-xl font-bold text-dark">Công ty TNHH Đầu tư và Phát triển FINTOP</h3>
+                    <p class="text-sm font-semibold text-primary mb-2">Thực tập sinh phân tích đầu tư | Tháng 12/2025 - Tháng 3/2026</p>
+                    <ul class="text-gray-600 list-disc ml-5 space-y-1">
+                        <li>Sử dụng phân tích TA để đánh giá và lọc các cổ phiếu tiềm năng.</li>
+                        <li>Làm báo cáo phân tích cơ bản và kỹ thuật một doanh nghiệp. <a href="https://docs.google.com/document/d/1iCmM-dSSmOnjXOBiFnhH1BcVNieru00kzaTlZndlfkE/edit?usp=sharing" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Link báo cáo</a></li>
+                        <li>Triển khai làm kênh phân tích đầu tư đạt 21 đăng ký/tháng. <a href="https://www.youtube.com/@TLinvest-tl21" target="_blank" class="text-blue-500 hover:underline"><i class="fa-solid fa-link text-sm"></i> Kênh Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 bg-light">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Dự án</h2>
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be rendered here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates & Awards Section -->
+        <section id="certificates" class="py-20 px-4 max-w-6xl mx-auto">
+            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Chứng chỉ & Giải thưởng</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-secondary border-b-2 border-gray-200 pb-2 inline-block">Chứng chỉ</h3>
+                <div id="certificates-container" class="flex flex-wrap gap-4">
+                    <!-- Certificates rendered via JS -->
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-12 text-secondary border-b-2 border-gray-200 pb-2 inline-block">Giải thưởng</h3>
+                <div class="timeline-container relative w-full mx-auto mt-4">
+                    <div class="timeline-line absolute w-1 bg-primary/30 h-full left-4 md:left-1/2 md:-ml-[2px] rounded-full"></div>
+                    <div id="awards-container" class="relative w-full flex flex-col space-y-8 md:space-y-0">
+                        <!-- Awards rendered via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-300">
+                &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
+            </p>
+            <div class="flex space-x-4 text-lg">
+                <a href="https://github.com/hatrang-ship-it" target="_blank" class="hover:text-white text-gray-300 transition"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:lehatrang21102004@gmail.com" class="hover:text-white text-gray-300 transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

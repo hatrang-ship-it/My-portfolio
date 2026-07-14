@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết dự án - Lê Hà Trang</title>
+    <!-- Google Fonts -->
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/google-sans');
+    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS & Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5b4282',
+                        secondary: '#4A3B7A',
+                        dark: '#333333',
+                        light: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans Text"', '"Google Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- Simple Navbar -->
+    <nav class="w-full bg-primary text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
+            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-300 transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <!-- Project Header -->
+            <div class="mb-10 pb-6 border-b border-gray-200">
+                <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Airline Data Information Management</h1>
+                <div class="flex items-center text-gray-500 font-medium">
+                    <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
+                    Công cụ: SQL, Data Management, Database Design
+                </div>
+            </div>
+
+            <!-- Markdown Content Area -->
+            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
+            <div class="font-sans">
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Thời gian: Tháng 7 năm 2024<br>#Quản lý thông tin dữ liệu của một hãng hàng không#</p>
+<h1>Introduction</h1>
+<h1><strong class="font-bold text-gray-900">Mục tiêu:</strong> Xây dựng một hệ thống cơ sở dữ liệu (CSDL) mạnh mẽ cho một hãng hàng không giả tưởng nhằm tối ưu hóa quản lý các hoạt động như khách hàng, thông tin vé, nhân viên, lộ trình bay, bảo trì, v.v.</h1>
+<h1><strong class="font-bold text-gray-900">Lợi ích:</strong> Việc đầu tư vào hệ thống CSDL quan hệ hiện đại không chỉ giúp cải thiện hiệu quả vận hành, nâng cao chất lượng dịch vụ khách hàng, quản lý tài chính và đảm bảo an toàn, mà còn là chiến lược dài hạn để Vietjet duy trì lợi thế cạnh tranh và phát triển bền vững.</h1>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Dữ liệu:</strong> Dữ liệu của chúng tôi là dữ liệu giả tưởng nhằm kiểm tra xem hệ thống có hoạt động như mong muốn không. </p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">Business Description</strong></h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">2.1 Bối cảnh kinh doanh:</strong> </p>
+<h1>Vietjet Air là hãng hàng không giá rẻ quốc tế hàng đầu tại Việt Nam, áp dụng mô hình hàng không giá rẻ (LCC) kết hợp chất lượng dịch vụ cao và công nghệ hiện đại. Hãng tối ưu hóa chi phí bằng cách sử dụng một loại máy bay duy nhất, cắt giảm các dịch vụ không cần thiết, đồng thời gia tăng doanh thu từ các dịch vụ bổ trợ.</h1>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">2.2 Câu chuyện người dùng (User Story):</strong> </p>
+<h1>Phân tích nhu cầu của ba đối tượng chính:</h1>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><h1><strong class="font-bold text-gray-900">Hành khách:</strong> Cần tìm kiếm/đặt vé, chọn dịch vụ bổ trợ, quản lý thông tin đặt chỗ và nhận thông báo thay đổi chuyến bay.</h1>
+</li>
+<li><h1><strong class="font-bold text-gray-900">Nhân viên:</strong> Cần quản lý thông tin chuyến bay, thông tin hành khách, xử lý các yêu cầu dịch vụ và đặt chỗ của khách hàng.</h1>
+</li>
+<li><h1><strong class="font-bold text-gray-900">Quản lý:</strong> Cần kiểm soát đội bay và lịch trình, cập nhật thông tin máy bay, bảo trì, cũng như xem báo cáo doanh thu và phân tích dữ liệu hành khách để đưa ra quyết định kinh doanh.</h1>
+</li>
+</ul>
+<h1>Relationship:</h1>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">1/. Nhóm Quản lý Khai thác (Vận hành bay)</strong></h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Chuyến bay (Flight) &amp; Máy bay (Aircraft) — /[Một-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một máy bay (Aircraft) có thể được sử dụng để thực hiện nhiều chuyến bay (Flight) khác nhau theo thời gian.  </li>
+<li>Một chuyến bay (Flight) cụ thể tại một thời điểm chỉ do một máy bay duy nhất thực hiện.</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Chuyến bay (Flight) &amp; Tuyến bay (Airway) — /[Một-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một tuyến bay (Airway) sẽ có rất nhiều chuyến bay (Flight) khai thác trên tuyến đó.  </li>
+<li>Một chuyến bay (Flight) cụ thể sẽ chỉ bay dọc theo một tuyến bay (Airway) duy nhất.</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Tuyến bay (Airway) &amp; Sân bay (Airport) — /[Một-Nhiều, áp dụng 2 lần/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một sân bay (Airport) có thể là điểm khởi hành của nhiều tuyến bay và là điểm đến của nhiều tuyến bay khác.  </li>
+<li>Mỗi tuyến bay (Airway) chỉ được xác định bởi chính xác 1 Sân bay đi (<code>DepartureAirportID</code>) và 1 Sân bay đến (<code>ArrivalAirportID</code>).</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Chuyến bay (Flight) &amp; Nhân viên (Employee) — /[Nhiều-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><em>(Thông qua bảng <code>Employee_Flight</code>)</em> Một chuyến bay (Flight) cần một tổ bay gồm nhiều nhân viên (Employee) phục vụ.  </li>
+<li>Một nhân viên (Employee) sẽ tham gia làm việc trên nhiều chuyến bay (Flight) khác nhau trong suốt sự nghiệp.</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Máy bay (Aircraft) &amp; Hồ sơ bảo trì (Maintenance/_Record) — /[Một-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một chiếc máy bay (Aircraft) sẽ có nhiều hồ sơ bảo trì (Maintenance/_Record) định kỳ theo thời gian.  </li>
+<li>Mỗi hồ sơ bảo trì (Maintenance/_Record) chỉ ghi nhận tình trạng kỹ thuật cho duy nhất một chiếc máy bay.</li>
+</ul>
+</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">2/. Nhóm Quản lý Dịch vụ &amp; Hành khách (Kinh doanh)</strong></h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Đặt chỗ (Booking) &amp; Hành khách (Passenger) — /[Một-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một hành khách (Passenger) có thể thực hiện nhiều lần đặt chỗ (Booking) khác nhau.  </li>
+<li>Mỗi lượt đặt chỗ (Booking) chỉ đại diện và thuộc về một hành khách (Passenger) duy nhất.</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Đặt chỗ (Booking) &amp; Chuyến bay (Flight) — /[Một-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Một chuyến bay (Flight) sẽ tiếp nhận rất nhiều lượt đặt chỗ (Booking) của các hành khách.  </li>
+<li>Mỗi lượt đặt chỗ (Booking) chỉ có giá trị hiệu lực trên một chuyến bay (Flight) cụ thể.</li>
+</ul>
+</li>
+<li><strong class="font-bold text-gray-900">Đặt chỗ (Booking) &amp; Dịch vụ (Service/_Type) — /[Nhiều-Nhiều/]</strong>  <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><em>(Thông qua bảng <code>Booking_service</code>)</em> Một lượt đặt chỗ (Booking) có thể mua thêm nhiều loại dịch vụ (Service/_Type) khác nhau (như mua thêm hành lý, chọn ghế, suất ăn...).  </li>
+<li>Một loại dịch vụ (Service/_Type) có thể được bán cho rất nhiều lượt đặt chỗ (Booking) khác nhau.</li>
+</ul>
+</li>
+</ul>
+<img src="assets/projects/Data Information Management of an Airline/hinh1.jpg" alt="Minh họa dự án" class="w-full h-auto rounded-lg shadow-md my-6"><h1>Problems</h1>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Giai đoạn 1: Vận hành hàng ngày (Daily Operations)</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 1 (Kỹ năng: <code>SELECT</code>, <code>WHERE</code>, <code>LIKE</code>): Lọc tệp khách hàng mục tiêu.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Hãng có chương trình quay số trúng thưởng cho các khách hàng có tên chứa chữ &quot;a&quot;. Nhân viên marketing cần xuất danh sách toàn bộ khách hàng thỏa mãn điều kiện này, kèm theo thông tin liên lạc để gửi email thông báo.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select /*</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Passenger</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where Firstname Like &#39;%a%&#39;;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ID	Firstname	Lastname	Birthday	PassportNumber	Contactdetail</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">1	Van Tien	Vu	1998-01-01	98723111	<a href="mailto:vuvantien91@yahoo.com" target="_blank" class="text-blue-600 hover:underline">vuvantien91@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">2	Khanh Linh	Vu	1998-02-02	8663201	<a href="mailto:vklinh123@gmail.com" target="_blank" class="text-blue-600 hover:underline">vklinh123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">3	Hoang Nguyen	Lai	2001-04-01	6892012	<a href="mailto:lhoangnguyen@gmail.com" target="_blank" class="text-blue-600 hover:underline">lhoangnguyen@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">4	Minh Giam	Hoang	2004-07-10	7102932	<a href="mailto:hmgiam@yahoo.com" target="_blank" class="text-blue-600 hover:underline">hmgiam@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">5	Tranh Anh	Huynh	2003-07-11	7152002	<a href="mailto:huynhtranganh@gmail.com" target="_blank" class="text-blue-600 hover:underline">huynhtranganh@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">6	Tien Dat	Nguyen	2002-11-01	99232011	<a href="mailto:datng123@gmail.com" target="_blank" class="text-blue-600 hover:underline">datng123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">7	Tuan Anh	Trinh Tran	1999-05-30	6655261	<a href="mailto:tttanh1993@gmail.com" target="_blank" class="text-blue-600 hover:underline">tttanh1993@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">8	Thi Ha	Ngo	1967-02-13	8710291	<a href="mailto:Nthiha96@yahoo.com" target="_blank" class="text-blue-600 hover:underline">Nthiha96@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">9	Tuan Anh	Phung	1968-07-15	901209332	<a href="mailto:ptuananh18@yahoo.com" target="_blank" class="text-blue-600 hover:underline">ptuananh18@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">10	Van Luong	Le	1978-09-23	1234567	<a href="mailto:lvl9021@gmail.com" target="_blank" class="text-blue-600 hover:underline">lvl9021@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">12	Elizabeth	No1	1992-07-09	129590	<a href="mailto:Elizahehe@gmail.com" target="_blank" class="text-blue-600 hover:underline">Elizahehe@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">13	Jack	Sparow	1956-05-08	2134211	<a href="mailto:cuopbien@icloud.com" target="_blank" class="text-blue-600 hover:underline">cuopbien@icloud.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">15	Donal	Trump	2005-08-12	695443791	<a href="mailto:USAnumber1@gov.com" target="_blank" class="text-blue-600 hover:underline">USAnumber1@gov.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">18	Thomas	Edison	2046-08-20	12445567	<a href="mailto:Thomas1122@gmail.com" target="_blank" class="text-blue-600 hover:underline">Thomas1122@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">20	Thi Thuy Trang	Hoang	1996-03-24	833596277	<a href="mailto:hoangtrang161102@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangtrang161102@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">21	Nhat Minh	Doan	2004-05-01	897622082	<a href="mailto:minhdoan98@gmail.com" target="_blank" class="text-blue-600 hover:underline">minhdoan98@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">23	Tuan Phat	Huynh	1993-01-29	905072002	<a href="mailto:htuanp45@gmail.com" target="_blank" class="text-blue-600 hover:underline">htuanp45@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">24	Nghia Hiep	Do	1992-10-10	907112002	<a href="mailto:dnhiep1234@gmail.com" target="_blank" class="text-blue-600 hover:underline">dnhiep1234@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">25	Trang Linh	Hoang	1994-03-21	901029889	<a href="mailto:htlinh1992@gmail.com" target="_blank" class="text-blue-600 hover:underline">htlinh1992@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">27	Hai Viet	Phi	2006-01-28	964230102	<a href="mailto:haivietphi12@gmail.com" target="_blank" class="text-blue-600 hover:underline">haivietphi12@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">28	Viet Anh	Vu	2004-06-27	964741672	<a href="mailto:Vuvietanhdz@gmail.com" target="_blank" class="text-blue-600 hover:underline">Vuvietanhdz@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">30	Minh Anh	Nguyen	1995-06-21	913219704	<a href="mailto:minhanhxinh@gmail.com" target="_blank" class="text-blue-600 hover:underline">minhanhxinh@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">31	Hoang Son	Tran	1994-10-18	584622082	<a href="mailto:hsontran@gmail.com" target="_blank" class="text-blue-600 hover:underline">hsontran@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">32	Duc Anh	Nguyen	1991-09-25	988722012	<a href="mailto:ducanh711@gmail.com" target="_blank" class="text-blue-600 hover:underline">ducanh711@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">33	Thanh Nhat	Hoang	2002-06-24	584622082	<a href="mailto:htn0507@gmail.com" target="_blank" class="text-blue-600 hover:underline">htn0507@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">34	Bao Chau	Vu Ngo	1984-03-11	982329702	<a href="mailto:vungobaochau@gmail.com" target="_blank" class="text-blue-600 hover:underline">vungobaochau@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">35	Thanh Duong	Dong	1996-05-10	868751685	<a href="mailto:Duongngu123@gmail.com" target="_blank" class="text-blue-600 hover:underline">Duongngu123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">36	Hoang Thang	Tran Le	1984-07-13	907781819	<a href="mailto:thangtran111@gmail.com" target="_blank" class="text-blue-600 hover:underline">thangtran111@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">37	Cong Thanh	Tran	1998-03-06	9012345678	<a href="mailto:thanhtrancong@gmail.com" target="_blank" class="text-blue-600 hover:underline">thanhtrancong@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">38	Tuan Anh	Dam	1968-02-14	9012345678	<a href="mailto:cosmos6578@gmail.com" target="_blank" class="text-blue-600 hover:underline">cosmos6578@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">40	Bao Nam	Hoang	1978-10-23	868855613	<a href="mailto:hoangnam123@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangnam123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">41	Phuong Tuan	Trinh Tran	1998-08-31	98653420	<a href="mailto:j97123@gmail.com" target="_blank" class="text-blue-600 hover:underline">j97123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">42	Thien An	Nguyen Hoang	1984-07-17	376590401	<a href="mailto:thienan5tr@gmail.com" target="_blank" class="text-blue-600 hover:underline">thienan5tr@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">45	Anh Tuan	Ha	1992-05-23	376799245	<a href="mailto:connhoanhkhong@gmail.com" target="_blank" class="text-blue-600 hover:underline">connhoanhkhong@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">46	Luong Anh	Nguyen	1982-06-14	98367218	<a href="mailto:luonganh07@gmail.com" target="_blank" class="text-blue-600 hover:underline">luonganh07@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">47	Ha Trang	Le	2001-09-05	985765439	<a href="mailto:hatrangne@gmail.com" target="_blank" class="text-blue-600 hover:underline">hatrangne@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">48	Thuy Ha	Nguyen Thi	2000-01-18	373529776	<a href="mailto:hathaibinh@gmail.com" target="_blank" class="text-blue-600 hover:underline">hathaibinh@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">49	Thu Trang	Cao Thi	1968-09-16	978568241	<a href="mailto:trangkhi@gmail.com" target="_blank" class="text-blue-600 hover:underline">trangkhi@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">50	Quang Hung	Do	1995-07-08	984980568	<a href="mailto:hungbavi@gmail.com" target="_blank" class="text-blue-600 hover:underline">hungbavi@gmail.com</a></p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">Giai đoạn 2: Xử lý sự cố &amp; Quản trị Dữ liệu (Incident Handling &amp; Data Management)</strong></h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 2 (Kỹ năng: <code>UPDATE</code>, <code>Subquery</code>): Cập nhật trạng thái khẩn cấp.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Chuyến bay 852 bất ngờ gặp sự cố thời tiết xấu và buộc phải hủy. Quản lý yêu cầu cập nhật lập tức trạng thái (Status) của chuyến bay này thành &#39;C&#39; (Cancelled), đồng thời dùng truy vấn lồng (Subquery) để lấy ngay số điện thoại của hành khách trên chuyến bay đó nhằm nhắn tin xin lỗi.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Update Flight</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Set Status/_FL /= &#39;C&#39;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where ID /= 852;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select /* from Flight where ID /= 852;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select Firstname, Lastname, Contactdetail</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Passenger</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where ID IN (Select PassengerID From Booking where FlightID /= 852);</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ID	AircraftID	DepartureTime	ArrivalTime	AirwayID	Status/_FL</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">852	4	1900-01-01 16:50:00.000	1900-01-01 08:45:00.000	J-H	C</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Firstname	Lastname	Contactdetail</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Minh Giam	Hoang	<a href="mailto:hmgiam@yahoo.com" target="_blank" class="text-blue-600 hover:underline">hmgiam@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Tuan Anh	Phung	<a href="mailto:ptuananh18@yahoo.com" target="_blank" class="text-blue-600 hover:underline">ptuananh18@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Elizabeth	No1	<a href="mailto:Elizahehe@gmail.com" target="_blank" class="text-blue-600 hover:underline">Elizahehe@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Emi	Fukkada	<a href="mailto:JAnnVvv@gmail.com" target="_blank" class="text-blue-600 hover:underline">JAnnVvv@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Chong Un	Kim	<a href="mailto:nuclear@gmail.com" target="_blank" class="text-blue-600 hover:underline">nuclear@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Nghia Hiep	Do	<a href="mailto:dnhiep1234@gmail.com" target="_blank" class="text-blue-600 hover:underline">dnhiep1234@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Kim Lien	Ta	<a href="mailto:lienta971@gmail.com" target="_blank" class="text-blue-600 hover:underline">lienta971@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Bao Chau	Vu Ngo	<a href="mailto:vungobaochau@gmail.com" target="_blank" class="text-blue-600 hover:underline">vungobaochau@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Linh Chi	Phung	<a href="mailto:linhchi113@gmail.com" target="_blank" class="text-blue-600 hover:underline">linhchi113@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Dong Nhi	Nguyen	<a href="mailto:dongquaxuantoi@gmail.com" target="_blank" class="text-blue-600 hover:underline">dongquaxuantoi@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Thu Trang	Cao Thi	<a href="mailto:trangkhi@gmail.com" target="_blank" class="text-blue-600 hover:underline">trangkhi@gmail.com</a></p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">Giai đoạn 3: Tối ưu Hóa Doanh thu &amp; Dịch vụ (Revenue &amp; Service Analysis)</strong></h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 3 (Kỹ năng: <code>INNER JOIN</code>, <code>SUM</code>): Tính toán doanh thu dịch vụ phụ trợ.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Vietjet là hãng hàng không giá rẻ nên doanh thu từ dịch vụ (đồ ăn, hành lý ký gửi, wifi) rất quan trọng. Kế toán cần tính tổng doanh thu (<code>SUM</code>) thu được từ các dịch vụ phụ trợ bán ra trên chuyến bay 123/.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select SUM(S.Price) as Totalrevenue</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Booking B</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner join Booking/_service BS on B.ID /= BS.BookingID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner join Service/_Type S on BS.ServiceID /= S.ID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where B.FlightID /= 123;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Totalrevenue</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">52</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 4 (Kỹ năng: <code>LEFT JOIN</code>, <code>IS NULL</code>): Tìm kiếm cơ hội chéo (Cross-selling).</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Bộ phận Telesale muốn gọi điện chèo kéo thêm dịch vụ. Họ cần danh sách các hành khách đã đặt vé (Booking) nhưng hiện tại <em>chưa</em> mua thêm bất kỳ dịch vụ phụ trợ (Service) nào.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select B.ID, P.ID, P.Firstname, p.Lastname, P.Contactdetail</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Passenger P</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner join Booking B on B.PassengerID /= P. ID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Left join Booking/_service BS on B. ID /= BS.BookingID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where BS.ServiceID IS NULL;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ID	ID	Firstname	Lastname	Contactdetail</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">18	9	Tuan Anh	Phung	<a href="mailto:ptuananh18@yahoo.com" target="_blank" class="text-blue-600 hover:underline">ptuananh18@yahoo.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">19	10	Van Luong	Le	<a href="mailto:lvl9021@gmail.com" target="_blank" class="text-blue-600 hover:underline">lvl9021@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">21	12	Elizabeth	No1	<a href="mailto:Elizahehe@gmail.com" target="_blank" class="text-blue-600 hover:underline">Elizahehe@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">22	13	Jack	Sparow	<a href="mailto:cuopbien@icloud.com" target="_blank" class="text-blue-600 hover:underline">cuopbien@icloud.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">23	14	Emi	Fukkada	<a href="mailto:JAnnVvv@gmail.com" target="_blank" class="text-blue-600 hover:underline">JAnnVvv@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">24	15	Donal	Trump	<a href="mailto:USAnumber1@gov.com" target="_blank" class="text-blue-600 hover:underline">USAnumber1@gov.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">26	17	Son Tung	MTP	<a href="mailto:skyoiii123@gmail.com" target="_blank" class="text-blue-600 hover:underline">skyoiii123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">27	18	Thomas	Edison	<a href="mailto:Thomas1122@gmail.com" target="_blank" class="text-blue-600 hover:underline">Thomas1122@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">28	19	Chong Un	Kim	<a href="mailto:nuclear@gmail.com" target="_blank" class="text-blue-600 hover:underline">nuclear@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">29	20	Thi Thuy Trang	Hoang	<a href="mailto:hoangtrang161102@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangtrang161102@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">31	22	Minh Duc	Le	<a href="mailto:lmd71102@gmail.com" target="_blank" class="text-blue-600 hover:underline">lmd71102@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">32	23	Tuan Phat	Huynh	<a href="mailto:htuanp45@gmail.com" target="_blank" class="text-blue-600 hover:underline">htuanp45@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">33	24	Nghia Hiep	Do	<a href="mailto:dnhiep1234@gmail.com" target="_blank" class="text-blue-600 hover:underline">dnhiep1234@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">34	25	Trang Linh	Hoang	<a href="mailto:htlinh1992@gmail.com" target="_blank" class="text-blue-600 hover:underline">htlinh1992@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">35	26	Linh My	Trinh Tran	<a href="mailto:ttlinhmy99@gmail.com" target="_blank" class="text-blue-600 hover:underline">ttlinhmy99@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">36	27	Hai Viet	Phi	<a href="mailto:haivietphi12@gmail.com" target="_blank" class="text-blue-600 hover:underline">haivietphi12@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">37	28	Viet Anh	Vu	<a href="mailto:Vuvietanhdz@gmail.com" target="_blank" class="text-blue-600 hover:underline">Vuvietanhdz@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">38	29	Kim Lien	Ta	<a href="mailto:lienta971@gmail.com" target="_blank" class="text-blue-600 hover:underline">lienta971@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">39	30	Minh Anh	Nguyen	<a href="mailto:minhanhxinh@gmail.com" target="_blank" class="text-blue-600 hover:underline">minhanhxinh@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">40	31	Hoang Son	Tran	<a href="mailto:hsontran@gmail.com" target="_blank" class="text-blue-600 hover:underline">hsontran@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">41	32	Duc Anh	Nguyen	<a href="mailto:ducanh711@gmail.com" target="_blank" class="text-blue-600 hover:underline">ducanh711@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">43	34	Bao Chau	Vu Ngo	<a href="mailto:vungobaochau@gmail.com" target="_blank" class="text-blue-600 hover:underline">vungobaochau@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">44	35	Thanh Duong	Dong	<a href="mailto:Duongngu123@gmail.com" target="_blank" class="text-blue-600 hover:underline">Duongngu123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">45	36	Hoang Thang	Tran Le	<a href="mailto:thangtran111@gmail.com" target="_blank" class="text-blue-600 hover:underline">thangtran111@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">46	37	Cong Thanh	Tran	<a href="mailto:thanhtrancong@gmail.com" target="_blank" class="text-blue-600 hover:underline">thanhtrancong@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">47	38	Tuan Anh	Dam	<a href="mailto:cosmos6578@gmail.com" target="_blank" class="text-blue-600 hover:underline">cosmos6578@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">48	39	Linh Chi	Phung	<a href="mailto:linhchi113@gmail.com" target="_blank" class="text-blue-600 hover:underline">linhchi113@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">49	40	Bao Nam	Hoang	<a href="mailto:hoangnam123@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangnam123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">50	41	Phuong Tuan	Trinh Tran	<a href="mailto:j97123@gmail.com" target="_blank" class="text-blue-600 hover:underline">j97123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">51	42	Thien An	Nguyen Hoang	<a href="mailto:thienan5tr@gmail.com" target="_blank" class="text-blue-600 hover:underline">thienan5tr@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">52	43	Thien Son	Trinh Tran	<a href="mailto:thienson97@gmail.com" target="_blank" class="text-blue-600 hover:underline">thienson97@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">53	44	Dong Nhi	Nguyen	<a href="mailto:dongquaxuantoi@gmail.com" target="_blank" class="text-blue-600 hover:underline">dongquaxuantoi@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">54	45	Anh Tuan	Ha	<a href="mailto:connhoanhkhong@gmail.com" target="_blank" class="text-blue-600 hover:underline">connhoanhkhong@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">55	46	Luong Anh	Nguyen	<a href="mailto:luonganh07@gmail.com" target="_blank" class="text-blue-600 hover:underline">luonganh07@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">56	47	Ha Trang	Le	<a href="mailto:hatrangne@gmail.com" target="_blank" class="text-blue-600 hover:underline">hatrangne@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">57	48	Thuy Ha	Nguyen Thi	<a href="mailto:hathaibinh@gmail.com" target="_blank" class="text-blue-600 hover:underline">hathaibinh@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">58	49	Thu Trang	Cao Thi	<a href="mailto:trangkhi@gmail.com" target="_blank" class="text-blue-600 hover:underline">trangkhi@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">59	50	Quang Hung	Do	<a href="mailto:hungbavi@gmail.com" target="_blank" class="text-blue-600 hover:underline">hungbavi@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">60	40	Bao Nam	Hoang	<a href="mailto:hoangnam123@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangnam123@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">61	10	Van Luong	Le	<a href="mailto:lvl9021@gmail.com" target="_blank" class="text-blue-600 hover:underline">lvl9021@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">62	15	Donal	Trump	<a href="mailto:USAnumber1@gov.com" target="_blank" class="text-blue-600 hover:underline">USAnumber1@gov.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">63	12	Elizabeth	No1	<a href="mailto:Elizahehe@gmail.com" target="_blank" class="text-blue-600 hover:underline">Elizahehe@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">64	13	Jack	Sparow	<a href="mailto:cuopbien@icloud.com" target="_blank" class="text-blue-600 hover:underline">cuopbien@icloud.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">65	18	Thomas	Edison	<a href="mailto:Thomas1122@gmail.com" target="_blank" class="text-blue-600 hover:underline">Thomas1122@gmail.com</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">66	20	Thi Thuy Trang	Hoang	<a href="mailto:hoangtrang161102@gmail.com" target="_blank" class="text-blue-600 hover:underline">hoangtrang161102@gmail.com</a></p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">Giai đoạn 4: Quy hoạch Chiến lược (Strategic Management)</strong></h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 5 (Kỹ năng: <code>GROUP BY</code>, <code>HAVING</code>, <code>MAX</code>/<code>COUNT</code>): Đánh giá tải trọng sân bay.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Ban lãnh đạo đang cân nhắc mở rộng đầu tư vào các sân bay trọng điểm. Họ cần thống kê xem những sân bay nào đang phục vụ nhiều chuyến bay của hãng nhất (yêu cầu lọc ra các sân bay có tổng số chuyến bay cất/hạ cánh lớn hơn 2).</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select AP.ID Airportcode, AP.Nameairport, Count(F.ID) as Total/_flights</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Airport AP</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner join Airway AW on AP.ID /= AW.ArrivalAirportID or AP.ID /= AW.DepartureAirportID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner join Flight F on AW.ID /= F.AirwayID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Group by AP.ID, AP.Nameairport</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Having COUNT(F.ID)/&gt;2 </p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ORDER BY Total/_Flights DESC;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Airportcode	Nameairport	Total/_flights</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SGN	Sân bay Qu?c t? Tân Son Nh?t	7</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">NRT	Sân bay Qu?c t? Narita	6</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">DAD	Sân bay Qu?c t? Ðà N?ng	4</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">HAN	Sân bay Qu?c t? N?i Bài	4</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">LHR	Sân bay Heathrow	3</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3"><strong class="font-bold text-gray-900">Giai đoạn 5: Tự động hóa Hệ thống (System Automation)</strong></h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 6 (Kỹ năng: <code>STORED PROCEDURE</code>): Công cụ tra cứu lịch sử bảo trì.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Nhập ID của máy bay (ví dụ: &#39;1&#39;), hệ thống sẽ tự động in ra toàn bộ lịch sử bảo trì và tên đội ngũ thực hiện của chiếc máy bay đó.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Create Procedure Search/_maintenance</p>
+<pre class="bg-gray-50 p-4 rounded-lg overflow-x-auto text-sm font-mono text-gray-800 my-6 border border-gray-200"><code>@AircraftID VARCHAR(225)
+</code></pre>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">As</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Begin</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Select AC.ID AircraftID,M.ID, AC.Model, M.MaintenanceDate, M.PerformedBy MaintenanceTeam</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">From Maintenance/_Record M</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Inner Join Aircraft AC on M.AircraftID /= AC.ID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Where M.AircraftID /= @AircraftID</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Order by M.MaintenanceDate DESC;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">END;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">EXEC Search/_maintenance @AircraftID /= 1</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">1	ABZ1482	Boeing 747	2024-02-14	Flyteam</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Câu 7 (Kỹ năng: <code>FUNCTION</code>): Hàm tính toán thời gian bay thực tế.</strong></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tình huống:</strong> Khách hàng thường xuyên hỏi về thời gian ngồi trên máy bay. Hệ thống cần một Hàm (Function) tự động tính toán ra &quot;thời lượng bay&quot; khi truyền vào tham số là giờ cất cánh và giờ hạ cánh.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Create function caculate/_Flightduration(</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">@DepartureTime Datetime,</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">@ArrivalTime Datetime</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">)</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Returns NVARCHAR(50)</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">As</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Begin</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Declare @TotalMinutues INT;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Declare @Hours INT;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Declare @Minutes INT;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Declare @Result NVARCHAR(50);</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SET @TotalMinutues /= DATEDIFF(Minute, @DepartureTime, @ArrivalTime);</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SET @Hours /= @TotalMinutues/60;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SET @Minutes /= @TotalMinutues%60;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SET @Result /= CAST(@Hours as NVARCHAR)+ N&#39;giờ&#39; /+ CAST(@Minutes as NVARCHAR) /+ N&#39;phút&#39;;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Return @Result;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">End;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">SELECT </p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ID AS FlightCode,</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">DepartureTime,</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ArrivalTime,</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">dbo.caculate/_Flightduration(DepartureTime, ArrivalTime) AS FlightDuration</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">FROM Flight;</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">101	1900-01-01 06:00:00.000	1900-01-01 11:00:00.000	5giờ0phút<br>102	1900-01-01 07:30:00.000	1900-01-01 09:30:00.000	2giờ0phút<br>103	1900-01-01 08:00:00.000	1900-01-01 14:00:00.000	6giờ0phút<br>104	1900-01-01 09:15:00.000	1900-01-01 19:15:00.000	10giờ0phút<br>106	1900-01-01 13:00:00.000	1900-01-01 18:00:00.000	5giờ0phút<br>107	1900-01-01 15:45:00.000	1900-01-01 17:45:00.000	2giờ0phút  </p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Dưới đây là link code chi tiết của dự án <a href="https://github.com/hatrang-ship-it/Data-Information-Management-of-an-Airline" target="_blank" class="text-blue-600 hover:underline">https://github.com/hatrang-ship-it/Data-Information-Management-of-an-Airline</a></p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-gray-300">
+                &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

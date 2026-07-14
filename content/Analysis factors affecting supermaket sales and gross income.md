@@ -1,0 +1,50 @@
+Thời gian: tháng 6 năm 2024
+### Phân tích các yếu tố ảnh hưởng đến doanh thu và tổng thu nhập của siêu thị
+- **Công cụ/Công nghệ:** Python (Pandas, NumPy, Matplotlib, Seaborn).
+
+#### CHI TIẾT DỰ ÁN
+**Bối cảnh:** Trong bối cảnh kinh doanh hiện nay, việc hiểu rõ các yếu tố ảnh hưởng đến doanh thu và lợi nhuận ròng của một siêu thị là rất quan trọng. Các yếu tố này không chỉ bao gồm các yếu tố nội tại của bản thân siêu thị mà còn liên quan đến các yếu tố bên ngoài và môi trường kinh doanh.
+**Lý do thực hiện:** Các yếu tố như phương thức thanh toán, chất lượng dịch vụ khách hàng, giới tính, vị trí địa lý có khả năng giúp siêu thị gia tăng doanh thu và lợi nhuận. Do đó, dự án được thực hiện nhằm phân tích các yếu tố có ảnh hưởng lớn đến tổng doanh thu và tổng thu nhập.
+**Dữ liệu:**
+Chúng tôi sử dụng bộ dữ liệu giả tưởng từ Kaggle. Đây là link bộ dữ liệu:
+https://www.kaggle.com/datasets/lovishbansal123/sales-of-a-supermarket?rvi=1
+**Những gì dự án đã làm:**
+**1. Đọc và tìm hiểu dữ liệu bao gồm 16 cột thông tin khác nhau (như Thành phố, Loại khách hàng, Giới tính, Dòng sản phẩm, Tổng tiền, Phương thức thanh toán...).**
+**2. Làm sạch dữ liệu: **
+Kiểm tra các biến bị thiếu, rỗng hoặc trùng lặp bằng Python.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh1.jpg
+**3. Sử dụng Python để phân tích và trực quan hóa dữ liệu.**
+**Phân tích mối quan hệ giữa tổng doanh thu và tổng thu nhập.**
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh2.jpg
+Tổng doanh thu và lợi nhuận gộp có mối tương quan thuận.Tốc độ ăng trưởng của thu nhập gộp là rất chậm, ngay cả ở những đơn hàng có giá trị rất lớn. Đường Gross Income gần như phẳng dạt về đáy, phản ánh tỷ suất lợi nhuận gộp của siêu thị được duy trì ở mức rất thấp (khoảng dưới 5%). Điều này cho thấy chiến lược kinh doanh của doanh nghiệp là chấp nhận biên lợi nhuận mỏng để bình ổn giá, đảm bảo tính cạnh tranh trên thị trường và tối ưu hóa lợi nhuận thông qua việc tăng số lượng giao dịch.
+**Phân tích hành vi khách hàng dựa trên sự phân bổ dữ liệu về Thành phố, Giới tính, Loại khách hàng và Dòng sản phẩm.**
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh3.jpg
+Số lượng đơn hàng tại 3 thành phố khá đều nhau cho thấy cả 3 cơ sở đều hoạt động ổn định. Trong đó Yangon có số đơn cao nhất trong 3 thành phố.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh7.jpg
+Thành phố Naypyitaw có tổng doanh thu (110.568,71 USD) và tổng thu nhập lớn nhất.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh4.jpg
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh5.jpg
+Khi xét về giới tính và kiểu khách hàng, cả 2 điều có số lượng khách hàng gần như bằng nhau. Số lượng khách hàng nữ chỉ nhỉnh hơn một chút so với số lượng khách hàng nam (501 > 499), xu hướng này tương tự với khách hàng thành viên và khách hàng thường (50.1% > 49.9%).
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh6.jpg
+Tỷ trọng của cả 6 ngành hàng rất sát nhau cho thấy siêu thị kinh doanh rất cân bằng, không phụ thuộc quá vào một ngành hàng nào. Trong đó ngành hàng điện tử, thời trang và thực phẩm bán cháy nhất trong các sản phẩm còn ngành hàng về thể thao và du lịch là bán chậm nhất.
+**Phân tích sự khác biệt giữa giới tính đối với tổng doanh thu và lợi nhuận thuần của từng dòng sản phẩm và từng loại khách hàng.**
+Mặc dù số lượng khách hàng nam và nữ khá cân bằng, sự dẫn đầu nhẹ của các ngành hàng như Phụ kiện điện tử và Thời trang cho tôi một giả thuyết về phong cách mua sắm. Liệu mức độ chịu chi của họ cho các nhóm sản phẩm này có sự phân hóa riêng biệt? Để trả lời câu hỏi đó, chúng ta sẽ đi sâu phân tích sự khác biệt giữa hai giới tính đối với tổng doanh thu và lợi nhuận trên từng dòng sản phẩm và loại khách hàng cụ thể.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh10.jpg
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh11.jpg
+Khách hàng nữ mang lại tổng doanh thu và lợi nhuận gộp cao hơn khách hàng nam.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh8.jpg
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh9.jpg
+Khách hàng nữ chiếm ưu thế ở các mặt hàng "Nhà cửa và đời sống", "Thực phẩm và đồ uống" và "Phụ kiện thời trang". Khách hàng nam có lợi thế ở các mặt hàng "Thể thao và du lịch" và "Sức khỏe và sắc đẹp".
+Vì khách hàng nữ mang lại doanh thu cao hơn cho 4/6 dòng sản phẩm, chúng ta nên chú trọng hơn đến việc thu hút khách hàng nữ : tổ chức các chương trình khuyến mại vào các ngày lễ của phụ nữ, v.v. Tuy nhiên, khách hàng nam vẫn mang lại doanh thu lớn cho hai dòng sản phẩm thể thao và sức khỏe, vì vậy chúng ta cũng phải có kế hoạch tiếp tục thu hút khách hàng nam ví dụ bán nhiều sản phẩm chăm sóc sức khỏe hơn cho nam giới và có nhiều chương trình khuyến mãi cho họ. Khách hàng nữ mang lại tổng doanh thu và lợi nhuận gộp cao hơn => Khách hàng nữ vẫn là khách hàng tiềm năng và cần được tập trung hơn.
+** Phân tích tác động của các dịch vụ siêu thị (phương thức thanh toán, chất lương dịch vụ) đối với lợi nhuận gộp và tổng doanh thu.**
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh12.jpg
+Biểu đồ thể hiện Tổng doanh thu (Total Sales) và Lợi nhuận gộp (Gross Income) được phân bổ theo ba phương thức thanh toán: Tiền mặt (Cash), Thẻ tín dụng (Credit card) và Ví điện tử (Ewallet). Hình thức thanh toán bằng Tiền mặt chiếm vị trí dẫn đầu với mức doanh thu cao nhất (112.207), theo sát ngay sau đó là Ví điện tử (109.993). Thẻ tín dụng là phương thức mang lại doanh thu thấp nhất trong ba loại (100.767). Mức lợi nhuận thu về hoàn toàn tỷ lệ thuận với tổng doanh thu của từng phương thức. Điều này cho thấy khách hàng của siêu thị có xu hướng ưa chuộng sự nhanh chóng và tiện lợi của Tiền mặt và Ví điện tử hơn so với Thẻ tín dụng. Từ đó chúng ta có thể đề xuất một số chương trình khuyến mãi để kích thích tiêu dùng của khách hàng qua phương thức thanh toán tiềm năng và hỗ trợ khách hàng thanh toán bằng tiền và ví điện tử thuận tiện nhất.
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh13.jpg
+.assets\projects\Analysis factors affecting supermaket sales and gross income\hinh14.jpg
+Để phân tích chất lượng dịch vụ của siêu thị ảnh hưởng đến doanh thu và lợi nhuận. Chúng tôi chia khách hàng thành 3 nhóm là Detractors(Người chỉ trích/Không hài lòng) là khách hàng chấm từ 6 điểm trở xuống, Passives (Người thụ động/Trung lập) là khách hàng chấm trên 6 đến 8 điểm và Promoters (Người ủng hộ/Hài lòng) là khách hàng chấm trên 8 điểm.
+Số lượng khách hàng trung lập là lớn nhất trong 3 nhóm, theo sau đó là số lượng khách hàng không hài lòng. Điều này cho thấy dịch vụ của các siêu thị chưa thật sự tốt. Thêm vào đó có một nghịch lý là nhóm khách hàng đánh giá thấp (từ 6 điểm trở xuống) lại mang về tổng doanh thu và lợi nhuận cao nhất, trong khi nhóm chấm điểm cao (trên 8 điểm) lại có mức chi tiêu thấp nhất. Điều này chứng tỏ khách hàng mua sắm với giá trị càng lớn thì yêu cầu của họ càng khắt khe và hiện tại siêu thị chưa đáp ứng được. Do đó, doanh nghiệp cần khẩn trương tìm hiểu "nút thắt" trong trải nghiệm của nhóm khách hàng này để có biện pháp cải thiện, qua đó giữ chân tệp khách VIP và bảo vệ nguồn doanh thu chủ lực.
+**Kết luận:**
+* Thành phố Naypyitaw là khu vực tiềm năng cần nhận được nhiều sự đầu tư phát triển.
+* Cần có chiến lược phù hợp để thu hút khách hàng nữ vì đây là tệp khách hàng tiềm năng nhất.
+* Không nên bỏ qua khách hàng nam mà cần có các sản phẩm hoặc chương trình mới (ví dụ: sản phẩm sức khỏe và làm đẹp cho nam) để thu hút họ.
+* Siêu thị cần tập trung cải thiện trải nghiệm khách hàng, cung cấp dịch vụ tốt và đảm bảo chất lượng sản phẩm để tăng mức độ hài lòng và nhận được đánh giá tích cực.

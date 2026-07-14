@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết dự án - Lê Hà Trang</title>
+    <!-- Google Fonts -->
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/google-sans');
+    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS & Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5b4282',
+                        secondary: '#4A3B7A',
+                        dark: '#333333',
+                        light: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans Text"', '"Google Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- Simple Navbar -->
+    <nav class="w-full bg-primary text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
+            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-300 transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <!-- Project Header -->
+            <div class="mb-10 pb-6 border-b border-gray-200">
+                <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Điền tên dự án vào đây</h1>
+                <div class="flex items-center text-gray-500 font-medium">
+                    <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
+                    Công cụ: [Liệt kê công cụ]
+                </div>
+            </div>
+
+            <!-- Markdown Content Area -->
+            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
+            <div class="font-sans">
+                
+                <p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Đây là phần tóm tắt dự án của bạn. Bạn hãy xóa đoạn text mẫu này và dán nội dung thật của dự án vào đây nhé.</p>
+
+                <h2>1. Giới thiệu</h2>
+                <p>Nội dung chi tiết của phần giới thiệu...</p>
+                <img src="https://via.placeholder.com/800x400?text=Ảnh+Minh+Họa" alt="Minh hoạ dự án">
+
+                <h2>2. Phương pháp</h2>
+                <ul>
+                    <li>Gạch đầu dòng 1</li>
+                    <li>Gạch đầu dòng 2</li>
+                </ul>
+
+                <h2>3. Kết quả</h2>
+                <p>Nội dung chi tiết kết quả đạt được...</p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-gray-300">
+                &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

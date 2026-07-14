@@ -1,0 +1,162 @@
+# **Phân tích Tài chính SSI và Quản lý Danh mục Đầu tư**
+
+**Link dự án: [FDA-SSI](https://drive.google.com/drive/folders/1hANsgdYeT8B71_5CM1dS6Wi8MOLwhlW2?usp=sharing)**
+
+# **1\. Giới thiệu về công ty**
+
+* **Tên công ty:** Công ty Cổ phần Chứng khoán SSI (SSI) \- một trong những công ty chứng khoán tư nhân lớn nhất tại Việt Nam.  
+* **Tầm nhìn (Vision):** "Chúng ta cùng thành công" (We succeed together). SSI cam kết mang lại kết quả tối ưu cho khách hàng, đối tác, cổ đông và cộng đồng, đồng thời khám phá các cơ hội đầu tư mới trên thị trường tài chính để biến chúng thành lợi nhuận.  
+* **Sứ mệnh (Mission):** "Kết nối vốn và cơ hội đầu tư" (Connecting capital and investment opportunities).  
+* **Lịch sử & Định hướng:** Công ty liên tục tăng vốn điều lệ, mở rộng các mảng kinh doanh, tập trung đa dạng hóa danh mục đầu tư (đặc biệt vào fintech), phát triển quản trị rủi ro, áp dụng công nghệ hiện đại và tích hợp ESG vào chiến lược phát triển.  
+* **Các dòng sản phẩm chính:** SSI cung cấp các dịch vụ bao gồm: Môi giới chứng khoán (Securities Brokerage), Tư vấn tài chính (Financial Advisory), Tự doanh (Proprietary Trading), Quản lý quỹ & Tín thác đầu tư (Fund Management & Investment Trust), Ngân hàng đầu tư (Investment Banking) và Dịch vụ tài chính bán lẻ (Retail Financial Services).
+
+# **2\. Dữ liệu**
+
+* **Dữ liệu phân tích doanh nghiệp:** Bộ dữ liệu thu thập dữ liệu thường niên trong vòng 10 năm (2014 \- 2024). Dữ liệu bao gồm 30 công ty thuộc 3 nhóm ngành: Bất động sản (Real Estate), Vật liệu (Material) và Dịch vụ Tài chính (Financial Services).  
+* **Dữ liệu phân tích ảnh hưởng:** Sử dụng giá cổ phiếu của 20 tập đoàn lớn tại Mỹ thuộc hai lĩnh vực Công nghiệp (Industrials Sector) và Hàng tiêu dùng (Consumer Discretionary Sector) để đánh giá tác động của bầu cử và chính sách thuế.
+
+# **3\. Những bước phân tích**
+
+## **3.1 Phân tích Hiệu suất Doanh nghiệp (Industry Benchmarking)**
+
+So sánh các chỉ số tài chính cốt lõi (ROA, ROE, Tỷ suất lợi nhuận ròng, Tỷ lệ thanh toán tiền mặt...) của SSI với các công ty cùng ngành.  
+.assets\projects\Financial analysis\hinh1.jpg
+
+### **Lợi nhuận**
+
+**Lợi nhuận trên vốn chủ sở hữu (ROE)** là chỉ số đo lường hiệu quả tài chính của một công ty bằng cách so sánh lợi nhuận ròng với vốn chủ sở hữu của cổ đông, ROE càng cao thì lợi nhuận vốn càng cao.   
+So sánh hiệu suất vốn chủ sở hữu (ROE) dựa trên số liệu năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh2.jpg  
+Xếp hạng ROE dựa trên số liệu năm 2024  
+.assets\projects\Financial analysis\hinh3.jpg  
+Chênh lệch phần trăm lợi nhuận trên vốn chủ sở hữu (ROE) của SSI so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh4.jpg  
+Lợi nhuận trên vốn chủ sở hữu (ROE) là chỉ số đo lường hiệu quả tài chính của một công ty bằng cách so sánh lợi nhuận ròng với vốn chủ sở hữu của cổ đông, ROE càng cao thì lợi nhuận vốn càng cao. ROE của SSI đang có xu hướng tăng từ năm 2014 đến năm 2024, SSI xếp hạng top 2 ngành với ROE lần lượt là 11,37% và 10,06% trong năm 2024 và 2023\. ROE của SSI cao hơn DSE (công ty có ROE thấp nhất) với tỷ suất 56%.
+
+### **Tăng trưởng**
+
+**Doanh thu thuần (Net revenue)** thể hiện tổng thu nhập mà công ty thu được từ doanh số bán hàng sau khi đã trừ đi các khoản khấu trừ như hàng trả lại, giảm giá và chiết khấu. . Về doanh thu thuần, doanh thu thuần càng cao thì quy mô kinh doanh, hiệu quả và khả năng sinh lời của công ty càng lớn.   
+So sánh hiệu quả hoạt động dựa trên doanh thu thuần năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh5.jpg  
+Xếp hạng doanh thu thuần dựa trên năm 2024  
+.assets\projects\Financial analysis\hinh6.jpg  
+Chênh lệch phần trăm về chỉ số SSI doanh thu thuần so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh7.jpg  
+Doanh thu của SSI biến động mạnh trong giai đoạn 2014-2024, giảm mạnh trong giai đoạn 2022-2023 và chỉ phục hồi nhẹ vào năm 2024\. SSI xếp hạng top 6 ngành với tỷ trọng 19,16% và 12,97% lần lượt trong năm 2024 và 2023\. Lợi nhuận thuần của SSI năm 2024 thấp hơn VCI khoảng 158% (công ty có lợi nhuận thuần cao nhất) và cao hơn VND (công ty có lợi nhuận thuần thấp nhất) 198%.  
+**Tăng trưởng vốn chủ sở hữu** đề cập đến sự gia tăng giá trị khoản đầu tư của chủ sở hữu vào doanh nghiệp. Về tăng trưởng vốn chủ sở hữu, tăng trưởng càng cao thì nền tảng tài chính và triển vọng tăng trưởng của công ty càng vững chắc.   
+So sánh hiệu quả hoạt động dựa trên mức tăng trưởng vốn chủ sở hữu năm 2024 và đường xu hướng.  
+So sánh hiệu quả hoạt động dựa trên mức tăng trưởng vốn chủ sở hữu năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh8.jpg  
+Xếp hạng mức tăng trưởng vốn chủ sở hữu dựa trên năm 2024  
+.assets\projects\Financial analysis\hinh9.jpg  
+Chênh lệch phần trăm về chỉ số SSI tăng trưởng vốn chủ sở hữu so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh10.jpg  
+Vốn chủ sở hữu của SSI biến động tăng trưởng đáng kể trong giai đoạn 2014-2024, đạt đỉnh điểm vào năm 2020-2021, giảm mạnh vào năm 2022 và phục hồi vừa phải vào năm 2024\. SSI nằm trong top 6 ngành với mức tăng trưởng 15,43% và 3,83% lần lượt cho năm 2024 và 2023\. Tăng trưởng vốn chủ sở hữu của SSI năm 2024 thấp hơn so với VCI ở mức khoảng 390% (cao nhất về tăng trưởng vốn chủ sở hữu) và cao hơn 48% so với VND (thấp nhất về tăng trưởng vốn chủ sở hữu).
+
+### **Tỷ lệ thanh khoản**
+
+**Tỷ lệ tiền mặt** là tỷ lệ giữa tiền mặt và các khoản tương đương tiền của một công ty với các khoản nợ ngắn hạn hiện có, tỷ lệ tiền mặt càng cao, khả năng thanh toán ngay lập tức bằng tiền mặt càng tốt, giúp công ty đảm bảo tính thanh khoản và giảm thiểu rủi ro tài chính.  
+So sánh hiệu quả hoạt động dựa trên tỷ lệ tiền mặt năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh11.jpg  
+Xếp hạng tỷ lệ tiền mặt dựa trên năm 2024  
+.assets\projects\Financial analysis\hinh12.jpg  
+Chênh lệch phần trăm tỷ lệ tiền mặt của SSI so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh13.jpg  
+Tỷ lệ tiền mặt của SSI giảm mạnh từ 0,63% năm 2014 xuống gần 0,01% năm 2024, cho thấy khả năng thanh toán bằng tiền mặt rất thấp. SSI nằm trong top 10 của ngành với tỷ lệ 0,01% lần lượt là 0,01% năm 2024 và 2023\. Tỷ lệ tiền mặt của SSI năm 2024 thấp hơn tỷ lệ của VCI ở mức khoảng 3500% (tỷ lệ tiền mặt tốt nhất).
+
+### **Tỷ lệ hiệu quả tài chính**
+
+**Tỷ lệ vòng quay tổng tài sản** là thước đo mức độ hiệu quả mà một công ty tận dụng tài sản của mình để tạo ra doanh thu. Tỷ lệ vòng quay tổng tài sản càng cao, công ty càng hiệu quả trong việc sử dụng tài sản để tạo ra doanh thu.  
+So sánh hiệu suất dựa trên tỷ lệ vòng quay tổng tài sản so với năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh14.jpg  
+Xếp hạng theo tổng vòng quay tài sản dựa trên số liệu năm 2024  
+.assets\projects\Financial analysis\hinh15.jpg  
+Chênh lệch phần trăm về chỉ số SSI vòng quay tổng tài sản so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh16.jpg  
+Tỷ lệ vòng quay tổng tài sản (Total Asset Turnover) của SSI giảm từ 0,31% năm 2018 xuống 0,12% năm 2024, cho thấy hiệu quả sử dụng tài sản kém. SSI xếp hạng trong top 9 ngành với TVT lần lượt là 0,12% năm 2024 và 0,12% năm 2023\. TVT của SSI năm 2024 thấp hơn so với VCI ở mức khoảng 42% (cao nhất về TVT).
+
+### **Tỷ lệ đòn bẩy**
+
+**Tỷ lệ nợ trên tài sản** đo lường tỷ lệ tài sản của công ty được tài trợ bằng nợ. Tỷ lệ nợ trên tài sản càng cao, công ty càng phụ thuộc vào nợ, làm tăng rủi ro tài chính.  
+So sánh hiệu quả hoạt động dựa trên tỷ lệ nợ trên tổng tài sản vào năm 2024 và theo đường xu hướng.  
+.assets\projects\Financial analysis\hinh17.jpg  
+Xếp hạng tỷ lệ nợ trên tổng tài sản dựa trên số liệu năm 2024  
+.assets\projects\Financial analysis\hinh18.jpg  
+Chênh lệch phần trăm về chỉ số SSI (tỷ lệ nợ trên tài sản) so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh19.jpg  
+Tỷ lệ nợ trên tổng tài sản của SSI tăng đều đặn từ 16,9% năm 2014 lên 61,9% năm 2024, cho thấy công ty ngày càng sử dụng nợ để tài trợ cho tài sản. SSI nằm trong top 7 của ngành với tỷ lệ 61,9% và 62,35% lần lượt cho năm 2024 và 2023\. Tỷ lệ nợ trên tổng tài sản của SSI năm 2024 cao hơn so với VCI ở mức khoảng 90% (tốt nhất về tỷ lệ nợ trên tổng tài sản) và thấp hơn so với CTS ở mức khoảng 18% (kém nhất về tỷ lệ nợ trên tổng tài sản).
+
+### **Tỷ lệ dòng tiền**
+
+Tỷ suất lợi nhuận tiền mặt trên tài sản (CRoA) cho thấy mức độ hiệu quả mà một công ty sử dụng tài sản của mình để tạo ra dòng tiền hoạt động. Tỷ suất lợi nhuận tiền mặt trên tài sản càng cao, công ty càng hiệu quả trong việc tạo ra dòng tiền từ tài sản, giúp tăng khả năng thanh toán và duy trì hoạt động bền vững.  
+So sánh hiệu suất tiền mặt trên tài sản dựa trên số liệu năm 2024 và đường xu hướng.  
+.assets\projects\Financial analysis\hinh20.jpg  
+Xếp hạng tỷ suất lợi nhuận tiền mặt trên tài sản dựa trên số liệu năm 2024  
+.assets\projects\Financial analysis\hinh21.jpg  
+Chênh lệch phần trăm lợi nhuận tiền mặt trên tài sản (SSI) so với các công ty khác trong cùng ngành.  
+.assets\projects\Financial analysis\hinh22.jpg  
+Tỷ suất lợi nhuận trên tài sản (Cash Return to Assets \- ROA) của SSI biến động mạnh, thường xuyên âm từ năm 2018 đến năm 2024, cho thấy khả năng tạo ra dòng tiền từ tài sản không ổn định và vẫn còn rủi ro. SSI xếp hạng trong top 2 của ngành với mức ROA lần lượt là \-5,8% và \-21,2% cho năm 2024 và 2023\. Tỷ suất lợi nhuận trên tài sản (ROA) của SSI năm 2024 thấp hơn so với CTS ở mức khoảng 64% (tốt nhất về ROA) và thấp hơn so với HCM ở mức khoảng 624% (tệ nhất về ROA).
+
+### **Tổng kết:**
+
+Giai đoạn 2014–2024 chứng kiến bức tranh tài chính của SSI với sự đan xen giữa điểm sáng về khả năng sinh lời và những thách thức lớn về thanh khoản cũng như hiệu suất sử dụng tài sản. Về mặt tích cực, SSI khẳng định vị thế dẫn đầu với tỷ suất sinh lời trên vốn chủ sở hữu (ROE) có xu hướng tăng vững chắc và đứng top 2 toàn ngành, cùng với doanh thu thuần và vốn chủ sở hữu đạt mức phục hồi vừa phải trong năm 2024 (đều xếp hạng top 6\) sau các giai đoạn biến động mạnh. Tuy nhiên, doanh nghiệp đang phải đối mặt với rủi ro tài chính gia tăng khi tỷ lệ nợ trên tài sản tăng đều đặn qua các năm lên mức 61,9%, trong khi hiệu quả khai thác tài sản (vòng quay tổng tài sản) liên tục sụt giảm và tỷ suất dòng tiền trên tài sản thường xuyên duy trì ở mức âm, cho thấy khả năng tạo tiền mặt chưa ổn định. Đặc biệt, tỷ lệ tiền mặt giảm sâu xuống mức gần như bằng không (0,01% năm 2024, xếp top 10 ngành) là một tín hiệu cảnh báo lớn về năng lực thanh toán tức thời, đòi hỏi SSI cần có những chiến lược tối ưu hóa cấu trúc tài sản và kiểm soát đòn bẩy hiệu quả hơn trong thời gian tới. 
+
+## **3.2 Đánh giá Tác động Vĩ mô (Tariff Impacts)**
+
+Phân tích biến động giá cổ phiếu Mỹ trong lĩnh vực công nghiệp và hàng tiêu dùng không thiết yếu xoay quanh ngày bầu cử 5/11/2024 tại Mỹ và các thông báo về chính sách thuế quan mới của chính quyền Trump.
+
+### **Phản ứng của thị trường trước và sau sự kiện Ngày Bầu cử (Election Day) \- 5 tháng 11 năm 2024\.**
+
+**Lĩnh vực Công nghiệp (Industrials):** Dữ liệu từ biểu đồ cho thấy giá cổ phiếu ngành công nghiệp có xu hướng giảm nhẹ trước ngày bầu cử 5/11, sau đó hầu hết đều ổn định hoặc phục hồi nhẹ. Cụ thể, có khoảng 60% các công ty ghi nhận mức tăng trưởng sau ngày bầu cử, bao gồm CSX, DE, GE, HON, LMT và UNP.  
+.assets\projects\Financial analysis\hinh23.jpg  
+**Lĩnh vực Hàng tiêu dùng không thiết yếu (Consumer Discretionary):** Giá cổ phiếu trong nhóm này cho thấy sự biến động nhẹ xoay quanh ngày bầu cử. Ngay sau sự kiện, khoảng 60% các công ty (bao gồm AMZN, DG, HD, TGT, TSLA và MCD) đã đạt được mức tăng giá đáng kể, trong khi các công ty còn lại (như LOW, NKE, ROST và SBUX) lại có xu hướng giảm hoặc đi ngang.  
+.assets\projects\Financial analysis\hinh24.jpg  
+Điều này cho thấy hầu hết các công ty trong hai lĩnh vực này phản ứng tích cực với kết quả bầu cử. Sự tích cực này có thể đến từ việc tâm lý được giải tỏa khi sự bất định trước thềm bầu cử được xóa bỏ thêm vào đó là sự kỳ vọng vào chính sách mới  tiếp theo của chính phủ giúp nhà đầu tư trút bỏ tâm lý phòng thủ và tự tin rót vốn trở lại. 
+
+### **Phản ứng của thị trường trước và sau sự kiện thông báo chính sách thuế quan của Tổng thống Mỹ (US president's tariff announcement) \- ngày 2/4/2025.**
+
+**Lĩnh vực Công nghiệp (Industrials):** Trước thềm thông báo, giá cổ phiếu của các công ty có xu hướng đi ngang khá ổn định. Ngay khi thông báo thuế quan được đưa ra, biểu đồ ghi nhận một đợt sụt giảm đồng loạt và rõ rệt trên hầu hết các mã cổ phiếu, kéo dài đến khoảng ngày 9 tháng 4\. Sau nhịp giảm này, mức giá chững lại và bắt đầu đi ngang hoặc phục hồi nhẹ trong những tuần tiếp theo của tháng 4\.   
+.assets\projects\Financial analysis\hinh25.jpg  
+**Lĩnh vực Hàng tiêu dùng không thiết yếu (Consumer Discretionary):** Tình trạng tương tự cũng xảy ra ở nhóm này khi giá cổ phiếu đều cắm đầu lao dốc ngay lập tức sau vạch sự kiện. Đà giảm cũng kéo dài đến khoảng 9/4 trước khi bước vào giai đoạn phục hồi. Tuy nhiên, sự phục hồi này cũng không quá mạnh, sau đó các mã nhóm này tiếp tục giảm, ngoại từ TSLA sau đó tăng mạnh còn các mã khác thì đi ngang ổn định gần bằng lúc trước khi giảm.   
+.assets\projects\Financial analysis\hinh26.jpg  
+Cả hai nhóm ngành đều phản ứng tiêu cực ngay lập tức trước tin tức về thuế quan. Sự sụt giảm này xuất phát từ bản chất của việc tăng thuế nhập khẩu. Khi thuế nhập khẩu tăng sẽ khiến làm tăng chi phí nguyên liệu (với ngành công nghệ) và chi phí hàng đầu vào (ngành tiêu dùng, bán lẻ), điều này ảnh hưởng trực tiếp đến lợi nhuận của doanh nghiệp, điều này khiến nhà đầu tư rơi vào tâm lý hoảng loạn và định giá lại cổ phiếu.
+
+### **Phản ứng của thị trường trước và sau sự kiện thông báo hoãn chính sách thuế quan của Tổng thống Mỹ (Deferment US president's tariff announcement) \- ngày 9/4/2025.**
+
+**Lĩnh vực Công nghiệp (Industrials):** Các mã cổ phiếu của ngành công nghiệp đều tăng đột ngột trước thông báo hoãn chính sách thuế quan, sau đó giá các cổ phiếu duy trì nền tảng ổn định gần với mức ban đầu trước khi chính sách thuế quan được công bố trong suốt phần còn lại của tháng 4, trừ CSX.   
+.assets\projects\Financial analysis\hinh27.jpg  
+**Lĩnh vực Hàng tiêu dùng không thiết yếu (Consumer Discretionary):** Tình trạng tương tự diễn ra với các cổ phiếu ngành này. Ngay khi có tin hoãn thuế, hàng loạt mã cổ phiếu tăng trong đó mạnh mẽ nhất là TSLA, AMZN, HD. Sau nhịp tăng tức thời này, các cổ phiếu giao động ổn định và xu hướng chung là phục hồi dần.   
+.assets\projects\Financial analysis\hinh28.jpg  
+Cả hai nhóm ngành đều có phản ứng **tích cực và đồng thuận** ngay lập tức với tin tức hoãn chính sách thuế. Sự đảo chiều này do sự rủi ro về kinh tế từ chính sách thuế đã được gỡ bỏ, biên lợi nhuận của doanh nghiệp và giá cả trên thị trường được bảo toàn trong ngắn hạn, giải tỏa ngay lập tức bầu không khí bi quan trước đó. Lực mua quay lại thị trường đẩy giá cổ phiếu tăng mạnh ngay tại thời điểm công bố.
+
+## **3.3 Quản lý Danh mục Đầu tư (Portfolio Management)**
+
+**Xây dựng danh mục đầu tư trong lĩnh vực tài chính dựa trên dữ liệu đã thu thập được.**  
+**Tôi dựa vào ROE trung bình của doanh nghiệp để lựa chọn cổ phiếu cho danh mục.**   
+.assets\projects\Financial analysis\hinh29.jpg  
+Dựa trên bảng trên, tôi chọn 2 cổ phiếu là VCI và SHS có ROE trung bình cao nhất trong 10 doanh nghiệp  
+Sau đó tôi tính standard deviation của mỗi cổ phiếu, correlation và covariance của 2 cổ phiếu để phục vụ cho quá trình phân tích.  
+.assets\projects\Financial analysis\hinh30.jpg  
+.assets\projects\Financial analysis\hinh31.jpg  
+**Tiếp theo đó, tôi tính lợi nhuận của từng doanh nghiệp trong từng kịch bản đầu tư.**  
+Với công thức tính lợi nhuận của danh mục như sau:  
+Rp= i \= 1nwi Ri  
+Với w là tỷ trọng đầu tư của cổ phiếu và R là lợi nhuận của cổ phiếu đó.  
+Trong trường hợp này tôi lấy ROE làm tỷ suất lợi nhuận. Và được kết quả như sau:  
+.assets\projects\Financial analysis\hinh32.jpg  
+**Sau khi đã xác định được lợi nhuận chúng ta sẽ đo lường rủi ro của danh mục.**  
+Để tính được rủi ro của danh mục, chúng ta cần tính được Deviation và Standard Deviation của danh mục đó theo công thức:  
+Deviation  
+p2= w1212+w2222+2w1w2p1,212  
+Standard deviation  
+p= w1212+w2222+2w1w2p1,212  
+ là standard deviation của cổ phiếu  
+ là hệ số tương quan của 2 cổ phiếu  
+Đầu tiên, tôi tính rủi ro của  những phương án đầu tư dựa theo dữ liệu đã thu thập  
+Bảng Deviation của các danh mục đầu tư.  
+.assets\projects\Financial analysis\hinh33.jpg  
+Theo kết quả, phương án đầu tư 60% VCI và 40% SHS có phương sai thấp nhất trong các phương án, theo sau đó là 70% VCI và 30% SHS. Tuy nhiên, khi xét đến lợi nhuận thì 2 phương án này ở mức chỉ mang lại lợi nhuận ở mức trung bình thấp (9.17% và 9.12%). Sau đó, tôi phân tích rủi ro danh mục dưới nhiều trường hợp tương quan khác nhau để có cái nhìn khách quan hơn về rủi ro của bối cảnh thị trưởng.   
+.assets\projects\Financial analysis\hinh34.jpg  
+Tiếp theo, tôi vẽ một biểu đồ mô phỏng mối quan hệ giữa rủi ro \- độ lệch chuẩn ở trục X và lợi nhuận kỳ vọng của từng danh mục đầu tư ở trục Y. Thông qua sự dịch chuyển của các đường cong tương ứng với từng mức hệ số tương quan (từ \-1 đến 1), chúng ta có thể đánh giá mức độ thay đổi của rủi ro tổng thể và từ đó xác định kịch bản đầu tư thích hợp.  
+.assets\projects\Financial analysis\hinh35.jpg  
+Từ biểu đồ, ta có thể thấy rằng lợi nhuận kỳ vọng tăng khá hạn chế so với mức tăng rủi ro khi hệ số tương quan chuyển từ âm sang dương, cho thấy rằng việc chấp nhận rủi ro lớn hơn không phải lúc nào cũng tương xứng với lợi nhuận. Từ bảng độ lệch chuẩn danh mục đầu tư, ta thấy độ lệch chuẩn dao động từ 8,73 đến 12,97. Để tối ưu hóa lợi nhuận và tránh rủi ro, tôi chọn mức độ lệch chuẩn nằm giữa hai phạm vi này, tức là 10,03. Với mức rủi ro này, tôi có thể đạt được lợi nhuận cao nhất là 9,4%, để đạt được điều đó, tôi phải chọn đầu tư 10% vào VCI và 90% vào SHS.

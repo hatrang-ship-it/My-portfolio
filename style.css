@@ -1,0 +1,71 @@
+/* Custom Styles for Portfolio */
+
+/* Base settings and smooth scrolling are handled by Tailwind classes */
+
+body {
+    /* To prevent horizontal scroll on some devices */
+    overflow-x: hidden;
+}
+
+/* Navbar background transition on scroll */
+.navbar-scrolled {
+    background-color: rgba(91, 66, 130, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Mobile menu toggle classes */
+.menu-open {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #5b4282; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #4A3B7A; 
+}
+
+/* Custom Scrollbar for Modal to be thinner */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+/* Modal Markdown Content Customization (Overrides for prose if needed) */
+.prose img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem auto;
+}
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.prose th, .prose td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+}
+.prose th {
+    background-color: #f8fafc;
+}

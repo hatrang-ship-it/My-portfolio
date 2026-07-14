@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết dự án - Lê Hà Trang</title>
+    <!-- Google Fonts -->
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/google-sans');
+    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS & Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5b4282',
+                        secondary: '#4A3B7A',
+                        dark: '#333333',
+                        light: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans Text"', '"Google Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- Simple Navbar -->
+    <nav class="w-full bg-primary text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
+            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-300 transition">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <!-- Project Header -->
+            <div class="mb-10 pb-6 border-b border-gray-200">
+                <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                </a>
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Stock Price Forecasting & ESG Analysis</h1>
+                <div class="flex items-center text-gray-500 font-medium">
+                    <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
+                    Công cụ: Python, Double Machine Learning, XGBoost
+                </div>
+            </div>
+
+            <!-- Markdown Content Area -->
+            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
+            <div class="font-sans">
+<h1>Applying Machine Learning for Stock Price Forecasting and ESG Causal Analysis</h1>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Đây là toàn bộ dự án nghiên cứu về ứng dụng các thuật toán Machine Learning để dự báo giá cổ phiếu hàng ngày và sử dụng kỹ thuật Double Machine Learning (DML) để phân tích tác động nhân quả của các yếu tố ESG (Môi trường, Xã hội, Quản trị) đến lợi nhuận doanh nghiệp. Dữ liệu dùng trong dự án được lấy từ <a href="https://www.kaggle.com/datasets/shriyashjagtap/esg-and-financial-performance-dataset" target="_blank" class="text-blue-600 hover:underline">ESG and Financial Performance Dataset</a></p>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">📝 Tóm tắt dự án</h2>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Nghiên cứu này tập trung vào hai mục tiêu chính:</p>
+<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Dự báo giá cổ phiếu:</strong> So sánh hiệu suất của các mô hình Machine Learning (Linear Regression, Ridge, Random Forest, Gradient Boosting, XGBoost) trong việc dự báo giá đóng cửa đã điều chỉnh.</li>
+<li><strong class="font-bold text-gray-900">Phân tích nhân quả (Causal Inference):</strong> Sử dụng Double Machine Learning (DML) để làm sáng tỏ mối quan hệ giữa các chỉ số ESG/Rủi ro ESG và lợi nhuận của doanh nghiệp (hàng tháng/hàng năm).</li>
+</ol>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Kết quả chính:</strong></p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Các mô hình <strong class="font-bold text-gray-900">Linear/Ridge Regression</strong> cho thấy hiệu suất dự báo ổn định nhất ($R^2 /approx 0.999$).</li>
+<li>Dữ liệu lịch sử giá (đặc biệt là giá trễ và đường trung bình động - MA) đóng vai trò chủ đạo trong dự báo ngắn hạn, trong khi các yếu tố ESG có đóng góp không đáng kể trong khung dự báo giá hàng ngày.</li>
+<li>Tuy nhiên, các yếu tố ESG có tác động đáng kể đến <strong class="font-bold text-gray-900">lợi nhuận dài hạn</strong> của doanh nghiệp.</li>
+</ul>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">🛠 Công nghệ sử dụng</h2>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Ngôn ngữ:</strong> Python</li>
+<li><strong class="font-bold text-gray-900">Nền tảng:</strong> Google Colab</li>
+<li><strong class="font-bold text-gray-900">Thư viện chính:</strong></li>
+<li><code>scikit-learn</code>: Triển khai các mô hình Linear, Ridge, Random Forest, Gradient Boosting.</li>
+<li><code>xgboost</code>: Triển khai XGBoost.</li>
+<li><code>shap</code>: Giải thích tầm quan trọng của các tính năng (Feature Importance).</li>
+<li><code>DoubleML</code>: Thực hiện phân tích nhân quả.</li>
+</ul>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">📂 Cấu trúc dự án</h2>
+<pre class="bg-gray-50 p-4 rounded-lg overflow-x-auto text-sm font-mono text-gray-800 my-6 border border-gray-200"><code class="language-text">├── data/               # Dữ liệu tài chính &amp; ESG (cần cấu hình)
+├── models/             # Script huấn luyện và đánh giá mô hình
+├── notebooks/          # Các file Jupyter Notebook (quy trình EDA, Modeling, Causal Inference)
+├── README.md           # Tài liệu dự án
+└── requirements.txt    # Các thư viện phụ thuộc
+</code></pre>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">📊 Kết quả đánh giá mô hình (Tập kiểm thử)</h2>
+<table>
+<thead>
+<tr>
+<th>Mô hình</th>
+<th>MAE</th>
+<th>MSE</th>
+<th>$R^2$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Linear Regression</td>
+<td>1.93</td>
+<td>15.46</td>
+<td>0.9993</td>
+</tr>
+<tr>
+<td>Ridge Regression</td>
+<td>1.93</td>
+<td>15.46</td>
+<td>0.9993</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>6.27</td>
+<td>583.35</td>
+<td>0.9718</td>
+</tr>
+<tr>
+<td>Gradient Boosting</td>
+<td>6.09</td>
+<td>528.93</td>
+<td>0.9745</td>
+</tr>
+<tr>
+<td>XGBoost</td>
+<td>19.21</td>
+<td>10781.21</td>
+<td>0.4794</td>
+</tr>
+</tbody></table>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Đánh giá tác động ESG và Nghiên cứu nhân quả</h2>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Nghiên cứu này phân tích sự tích hợp của điểm số và rủi ro ESG vào các mô hình dự báo giá cổ phiếu, đồng thời sử dụng phương pháp nhân quả để đánh giá tác động của ESG đến lợi nhuận doanh nghiệp.</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Dự báo giá cổ phiếu</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Yếu tố tác động:</strong> Sử dụng SHAP cho thấy giá cổ phiếu dự báo chủ yếu bị chi phối bởi dữ liệu giá trong quá khứ (đặc biệt là giá trễ 1 ngày và đường trung bình trượt). Các biến số ESG chỉ đóng góp rất nhỏ vào khả năng dự báo giá ngắn hạn.</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Nghiên cứu nhân quả (Causal Inference)</h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Sử dụng phương pháp <strong class="font-bold text-gray-900">Double Machine Learning (DML)</strong> để xử lý vấn đề nội sinh, nghiên cứu đã rút ra các kết luận về mối quan hệ nhân quả giữa ESG và lợi nhuận:</p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tác động của ESG Risk:</strong></p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Môi trường (E):</strong> Rủi ro môi trường cao có xu hướng tạo ra lợi nhuận cao hơn (lợi nhuận bù đắp cho rủi ro).</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Xã hội (S):</strong> Rủi ro xã hội có tác động tiêu cực rõ rệt đến hiệu quả kinh doanh.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Quản trị (G):</strong> Rủi ro quản trị có tác động tiêu cực nhưng không đáng kể.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tác động của ESG Score:</strong></p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Cải thiện điểm số ở cả 3 trụ cột (E, S, G) đều dẫn đến sự gia tăng trực tiếp trong lợi nhuận trung bình của doanh nghiệp.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Ngắn hạn (Tháng):</strong> Điểm quản trị (G) có ảnh hưởng mạnh nhất do thị trường phản ứng nhanh với các thay đổi về quyền lực cổ đông.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Dài hạn (Năm):</strong> Điểm môi trường (E) và xã hội (S) thể hiện tác động lớn hơn và rõ rệt hơn, cho thấy các chiến lược phát triển bền vững cần thời gian để tạo ra giá trị kinh tế cụ thể.</p>
+</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Kết luận chung</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Các chỉ số ESG <strong class="font-bold text-gray-900">không phù hợp</strong> để dự báo giá cổ phiếu hàng ngày (ngắn hạn) vì giá cổ phiếu ngắn hạn bị chi phối mạnh bởi các biến kỹ thuật.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ESG có tác động <strong class="font-bold text-gray-900">đáng kể và tích cực đến lợi nhuận dài hạn</strong> (lợi nhuận tháng/năm), là yếu tố then chốt cho các quyết định đầu tư bền vững.</p>
+</li>
+</ul>
+<h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">🌐 Demo</h2>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Bạn có thể trải nghiệm thử các mô hình tại đây: <a href="https://www.google.com/search?q=https://huggingface.co/spaces/changle-2110/Stock-Prediction-Demo" target="_blank" class="text-blue-600 hover:underline">Stock Prediction Demo - Hugging Face Space</a><br>Đây là link github của dự án: <a href="https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main" target="_blank" class="text-blue-600 hover:underline">https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main</a></p>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-gray-300">
+                &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
