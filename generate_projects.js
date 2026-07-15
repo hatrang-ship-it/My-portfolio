@@ -48,6 +48,12 @@ projects.forEach((project, index) => {
     markdownContent = markdownContent.replace(/\\/g, '/');
     markdownContent = markdownContent.replace(/\.assets\/projects\//g, 'assets/projects/');
     
+    // Ensure newline before headings to prevent parsing errors
+    markdownContent = markdownContent.replace(/([^\n])\n(#{1,6} )/g, '$1\n\n$2');
+    
+    // The user requested all ## to be converted to h3
+    markdownContent = markdownContent.replace(/^## /gm, '### ');
+    
     const imgRegex = /(assets\/projects\/[^\n]*?\.(?:jpg|jpeg|png|gif|webp))/gi;
     markdownContent = markdownContent.replace(imgRegex, (match, p1) => {
         const cleanPath = p1.trim();

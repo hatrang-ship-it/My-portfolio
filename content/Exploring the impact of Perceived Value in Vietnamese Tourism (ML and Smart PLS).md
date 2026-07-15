@@ -20,7 +20,7 @@ Trong bối cảnh ngành du lịch Việt Nam hậu đại dịch cạnh tranh 
 
 ## 📊 Mô hình nghiên cứu
 
-.assets\projects\Exploring the Impact of Perceived Value on Tourists’ Intention to Return to Vietnamese Tourist Destinations A Big Data Mining and Linear Structural Modeling Approach\hinh1.png 
+.assets\projects\Exploring the impact of Perceived Value in Vietnamese Tourism ML and Smart PLS\hinh1.jpg 
 Nghiên cứu xây dựng mô hình dựa trên bốn chiều giá trị cảm nhận (biến độc lập) tác động đến ý định quay lại (biến phụ thuộc):
 
 1. **Giá trị chức năng (Functional Value):** Chi phí, chất lượng dịch vụ, môi trường.
