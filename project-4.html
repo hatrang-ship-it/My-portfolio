@@ -33,13 +33,21 @@
 </head>
 <body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
 
-    <!-- Simple Navbar -->
+    <!-- Navbar -->
     <nav class="w-full bg-[#9B8EC7] text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
-            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại</span>
+                    <span data-lang="en" class="hidden">Back</span>
+                </a>
+                <button id="lang-toggle" class="lang-toggle-btn px-3 py-1.5 text-xs font-bold uppercase tracking-wider border-2 border-white/70 rounded-full hover:bg-white hover:text-[#9B8EC7] transition-all duration-300 flex items-center gap-1.5" title="Switch language">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -49,57 +57,82 @@
             <!-- Project Header -->
             <div class="mb-10 pb-6 border-b border-gray-200">
                 <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
-                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại trang chủ</span>
+                    <span data-lang="en" class="hidden">Back to homepage</span>
                 </a>
-                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Exploring Perceived Value in Vietnamese Tourism A BERTopic & PLS-SEM Approach</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">User Segmentation in Banking Data</h1>
                 <div class="flex items-center text-gray-500 font-medium">
                     <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
-                    Công cụ: Python, BERTopic, PLS-SEM
+                    <span data-lang="vi">Công cụ: Python, Machine Learning (K-Means), PCA</span>
+                    <span data-lang="en" class="hidden">Tools: Python, Machine Learning (K-Means), PCA</span>
                 </div>
             </div>
 
-            <!-- Markdown Content Area -->
-            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
-            <div class="font-sans">
-<h1>Exploring Perceived Value in Vietnamese Tourism: A BERTopic &amp; PLS-SEM Approach</h1>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Kho lưu trữ này chứa mã nguồn và kết quả nghiên cứu về tác động của các khía cạnh &quot;Giá trị cảm nhận&quot; (Perceived Value) đối với sự hài lòng và ý định quay lại của du khách tại các điểm đến ở Việt Nam. Dự án áp dụng phương pháp tiếp cận dữ liệu lớn thông qua khai phá văn bản (Text Mining) và mô hình hóa cấu trúc tuyến tính (SEM).</p>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📝 Tóm tắt dự án</h3>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Nghiên cứu đánh giá tác động của 4 khía cạnh giá trị cảm nhận: <strong class="font-bold text-gray-900">Giá trị chức năng (Functional)</strong>, <strong class="font-bold text-gray-900">Giá trị trải nghiệm/cảm xúc (Hedonic)</strong>, <strong class="font-bold text-gray-900">Giá trị nhận thức (Epistemic)</strong>, và <strong class="font-bold text-gray-900">Giá trị quan hệ xã hội (Social Relationship)</strong>.</p>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Điểm nhấn phương pháp luận:</strong></p>
+            <!-- Vietnamese Content -->
+            <div class="font-sans" data-lang="vi">
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Thời gian: Tháng 9 năm 2024</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Customer Segmentation using K-Means Clustering</h3>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Thu thập dữ liệu:</strong> Sử dụng <code>Selenium</code> để tự động khai thác hơn 1300 địa điểm (68.503 dữ liệu thô) từ TripAdvisor và Google Maps.</li>
-<li><strong class="font-bold text-gray-900">Xử lý dữ liệu:</strong> Sử dụng <code>BERTopic</code> để tự động trích xuất 13 chủ đề trải nghiệm từ các đoạn văn bản (clauses).</li>
-<li><strong class="font-bold text-gray-900">Phân tích mô hình:</strong> Sử dụng <code>PLS-SEM</code> (SmartPLS) để kiểm định các giả thuyết về mối quan hệ nhân quả.</li>
-<li><strong class="font-bold text-gray-900">Kết quả:</strong> Giá trị trải nghiệm (Hedonic) là yếu tố tác động mạnh nhất đến sự hài lòng và ý định quay lại của du khách.</li>
+<li><strong class="font-bold text-gray-900">Công cụ/Công nghệ:</strong> Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn).</li>
 </ul>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">🛠 Công nghệ &amp; Công cụ</h3>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">CHI TIẾT DỰ ÁN</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Bối cảnh:</strong> Trong ngành ngân hàng và dịch vụ tài chính, việc hiểu rõ hành vi của khách hàng là chìa khóa để thiết kế các sản phẩm phù hợp, tối ưu hóa chiến dịch marketing và quản lý rủi ro hiệu quả. Khách hàng sử dụng thẻ tín dụng có những thói quen chi tiêu và thanh toán rất đa dạng: từ những người luôn trả hết nợ đúng hạn đến những người thường xuyên rút tiền mặt hoặc chỉ trả mức tối thiểu.<br><strong class="font-bold text-gray-900">Lý do thực hiện:</strong> Dự án này được thực hiện nhằm phân khúc khách hàng sử dụng thẻ tín dụng dựa trên hành vi giao dịch của họ trong 6 tháng qua. Việc phân cụm sẽ giúp ngân hàng nhận diện các nhóm khách hàng đặc trưng (ví dụ: nhóm sinh lời cao, nhóm rủi ro cao, nhóm ít sử dụng), từ đó đưa ra các chiến lược kinh doanh chính xác và cá nhân hóa hơn.<br><strong class="font-bold text-gray-900">Dữ liệu:</strong> Dữ liệu được lấy từ kaggle: <a href="https://www.kaggle.com/datasets/arjunbhasin2013/ccdata" target="_blank" class="text-[#9B8EC7] hover:underline">Tập dữ liệu Credit Card</a>.</p>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">Quy trình thực hiện:</h4>
+<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Khám phá và Tiền xử lý dữ liệu (EDA &amp; Preprocessing):</strong> Xử lý dữ liệu thiếu (điền giá trị trung bình), loại bỏ các cột không cần thiết (CUST_ID). Trực quan hóa phân phối của các biến và ma trận tương quan (Correlation Matrix) để hiểu mối quan hệ giữa các hành vi chi tiêu. Chuẩn hóa dữ liệu (Standardization) để đảm bảo các biến có cùng thang đo trước khi đưa vào mô hình.</li>
+<li><strong class="font-bold text-gray-900">Giảm chiều dữ liệu (Dimensionality Reduction):</strong> Sử dụng PCA (Principal Component Analysis) để giảm từ 17 biến gốc xuống số lượng thành phần chính ít hơn mà vẫn giữ được phần lớn thông tin (phương sai) của dữ liệu. Giúp trực quan hóa các cụm khách hàng dễ dàng hơn trên không gian 2D/3D và tăng tốc độ huấn luyện thuật toán.</li>
+<li><strong class="font-bold text-gray-900">Huấn luyện mô hình (Model Training):</strong> Sử dụng thuật toán K-Means Clustering để phân cụm. Áp dụng phương pháp Elbow (tìm điểm uốn của đồ thị WCSS) và Silhouette Score để xác định số lượng cụm (K) tối ưu nhất cho tập dữ liệu.</li>
+<li><strong class="font-bold text-gray-900">Phân tích kết quả (Cluster Analysis):</strong> Gán nhãn cụm cho từng khách hàng và diễn giải đặc điểm hành vi của từng nhóm để đưa ra Insights.</li>
+</ol>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">Kết quả phân tích cụm:</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Mô hình đã xác định được 4 nhóm khách hàng (K=4) với các đặc điểm nổi bật như sau:</p>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Ngôn ngữ:</strong> Python</p>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cụm 0 (Người Tiết Kiệm/Cẩn Trọng):</strong> Số dư tài khoản thấp, mua sắm ít và chủ yếu thanh toán đủ số dư. Nhóm này ít sử dụng các dịch vụ rút tiền mặt ứng trước (cash advance).</p>
 </li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Khai thác dữ liệu:</strong> <code>Selenium</code>, <code>Pandas</code></p>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cụm 1 (Người Chi Tiêu Cao/Rủi Ro Tiềm Ẩn):</strong> Có số dư tài khoản cao nhất, mua sắm nhiều và thường xuyên sử dụng hạn mức tín dụng cao. Tuy nhiên, họ cũng là nhóm rút tiền mặt ứng trước nhiều nhất và tỷ lệ thanh toán đầy đủ không cao, cho thấy rủi ro tín dụng tiềm ẩn.</p>
 </li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Xử lý ngôn ngữ tự nhiên (NLP):</strong></p>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cụm 2 (Người Trả Góp/Chi Tiêu Ổn Định):</strong> Thường xuyên thực hiện các giao dịch mua sắm theo hình thức trả góp (installment purchases). Tần suất giao dịch cao nhưng số tiền mỗi lần không quá lớn.</p>
 </li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><code>BERTopic</code>: Phân cụm chủ đề.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><code>RoBERTa</code>: Phân tích sắc thái (Sentiment Analysis).</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><code>Helsinki-NLP</code>: Dịch thuật đa ngôn ngữ.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><code>Large Language Model (LLM)</code>: Đánh giá điểm hài lòng.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Phân tích định lượng:</strong> <code>SmartPLS</code> (PLS-SEM).</p>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cụm 3 (Người Chỉ Trả Mức Tối Thiểu):</strong> Thường xuyên thanh toán số tiền tối thiểu (minimum payments). Họ duy trì số nợ lâu dài và ít có khả năng trả dứt điểm số dư trong ngắn hạn, mang lại lợi nhuận từ lãi suất nhưng cần theo dõi sát sao về khả năng vỡ nợ.</p>
 </li>
 </ul>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📊 Mô hình nghiên cứu</h3>
-<img src="assets/projects/Exploring the impact of Perceived Value in Vietnamese Tourism A BERTopic & PLS-SEM Approach/hinh1.jpg" alt="Minh họa dự án" class="w-full h-auto rounded-lg shadow-md my-6">
-Mô hình kiểm định 13 giả thuyết về tác động trực tiếp và gián tiếp (qua vai trò trung gian của sự hài lòng)<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📈 Kết quả chính</h3>
-<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Mô hình có tính giải thích cao:</strong> $R^2 = 0.874$ đối với cả sự hài lòng và ý định quay lại.</li>
-<li><strong class="font-bold text-gray-900">Tầm quan trọng của cảm xúc:</strong> Giá trị trải nghiệm (Hedonic) giữ vai trò chủ đạo, củng cố tầm quan trọng của trải nghiệm trong du lịch Việt Nam.</li>
-<li><strong class="font-bold text-gray-900">Vai trò trung gian:</strong> Sự hài lòng là cầu nối quan trọng chuyển hóa các giá trị cảm nhận thành hành vi quay lại (revisit intention).<br>Link github: <a href="https://github.com/hatrang-ship-it/Exploring-Perceived-Value-in-Vietnamese-Tourism-A-BERTopic-PLS-SEM-Approach" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/Exploring-Perceived-Value-in-Vietnamese-Tourism-A-BERTopic-PLS-SEM-Approach</a></li>
-</ul>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Link GitHub: <a href="https://github.com/hatrang-ship-it/K-means_Cluster_CC_Customer_Segmentation" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/K-means_Cluster_CC_Customer_Segmentation</a></p>
+            </div>
 
+            <!-- English Content -->
+            <div class="font-sans hidden" data-lang="en">
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Timeline: September 2024</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Customer Segmentation using K-Means Clustering</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Tools/Technologies:</strong> Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn).</li>
+</ul>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">PROJECT DETAILS</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Context:</strong> In the banking and financial services industry, understanding customer behavior is key to designing appropriate products, optimizing marketing campaigns, and effectively managing risk. Credit card customers have very diverse spending and payment habits: from those who always pay off their debt on time to those who frequently use cash advances or only pay the minimum amount.<br><strong class="font-bold text-gray-900">Motivation:</strong> This project was implemented to segment credit card users based on their transaction behavior over the past 6 months. Clustering helps banks identify distinct customer groups (e.g., highly profitable group, high-risk group, low-usage group), thereby providing more accurate and personalized business strategies.<br><strong class="font-bold text-gray-900">Data:</strong> Data is sourced from Kaggle: <a href="https://www.kaggle.com/datasets/arjunbhasin2013/ccdata" target="_blank" class="text-[#9B8EC7] hover:underline">Credit Card Dataset</a>.</p>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">Implementation Process:</h4>
+<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Exploratory Data Analysis (EDA) &amp; Preprocessing:</strong> Handled missing data (mean imputation), removed unnecessary columns (CUST_ID). Visualized variable distributions and the Correlation Matrix to understand the relationships between spending behaviors. Standardized the data to ensure all variables have the same scale before feeding into the model.</li>
+<li><strong class="font-bold text-gray-900">Dimensionality Reduction:</strong> Used PCA (Principal Component Analysis) to reduce 17 original variables down to fewer principal components while retaining most of the data's variance (information). This makes visualizing customer clusters easier in 2D/3D space and speeds up algorithm training.</li>
+<li><strong class="font-bold text-gray-900">Model Training:</strong> Used the K-Means Clustering algorithm to segment customers. Applied the Elbow method (finding the inflection point of the WCSS graph) and Silhouette Score to determine the optimal number of clusters (K) for the dataset.</li>
+<li><strong class="font-bold text-gray-900">Cluster Analysis:</strong> Assigned cluster labels to each customer and interpreted the behavioral characteristics of each group to provide Insights.</li>
+</ol>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">Clustering Results:</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">The model identified 4 customer groups (K=4) with the following outstanding characteristics:</p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cluster 0 (Savers/Cautious):</strong> Low account balances, few purchases, and mainly pay their full balances. This group rarely uses cash advance services.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cluster 1 (High Spenders/Potential Risk):</strong> Have the highest account balances, shop extensively, and frequently utilize high credit limits. However, they are also the group that uses cash advances the most, and their full payment rate is not high, indicating potential credit risk.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cluster 2 (Installment Buyers/Stable Spenders):</strong> Frequently make purchases via installment plans. They have a high transaction frequency, but the amount per transaction is not excessively large.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Cluster 3 (Minimum Payers):</strong> Frequently make minimum payments. They maintain long-term debt and are unlikely to pay off their balance completely in the short term, yielding profit from interest rates but requiring close monitoring for default risk.</p>
+</li>
+</ul>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">GitHub Link: <a href="https://github.com/hatrang-ship-it/K-means_Cluster_CC_Customer_Segmentation" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/K-means_Cluster_CC_Customer_Segmentation</a></p>
             </div>
         </div>
-    </main>undefined
+    </main>
+
+    <script src="lang-toggle.js"></script>
+</body>
+</html>

@@ -33,13 +33,21 @@
 </head>
 <body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
 
-    <!-- Simple Navbar -->
+    <!-- Navbar -->
     <nav class="w-full bg-[#9B8EC7] text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
-            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại</span>
+                    <span data-lang="en" class="hidden">Back</span>
+                </a>
+                <button id="lang-toggle" class="lang-toggle-btn px-3 py-1.5 text-xs font-bold uppercase tracking-wider border-2 border-white/70 rounded-full hover:bg-white hover:text-[#9B8EC7] transition-all duration-300 flex items-center gap-1.5" title="Switch language">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -49,18 +57,20 @@
             <!-- Project Header -->
             <div class="mb-10 pb-6 border-b border-gray-200">
                 <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
-                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại trang chủ</span>
+                    <span data-lang="en" class="hidden">Back to homepage</span>
                 </a>
                 <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Stock Price Forecasting & ESG Analysis</h1>
                 <div class="flex items-center text-gray-500 font-medium">
                     <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
-                    Công cụ: Python, Double Machine Learning, XGBoost
+                    <span data-lang="vi">Công cụ: Python, Double Machine Learning, XGBoost</span>
+                    <span data-lang="en" class="hidden">Tools: Python, Double Machine Learning, XGBoost</span>
                 </div>
             </div>
 
-            <!-- Markdown Content Area -->
-            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
-            <div class="font-sans">
+            <!-- Vietnamese Content -->
+            <div class="font-sans" data-lang="vi">
 <h1>Applying Machine Learning for Stock Price Forecasting and ESG Causal Analysis</h1>
 <p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Đây là toàn bộ dự án nghiên cứu về ứng dụng các thuật toán Machine Learning để dự báo giá cổ phiếu hàng ngày và sử dụng kỹ thuật Double Machine Learning (DML) để phân tích tác động nhân quả của các yếu tố ESG (Môi trường, Xã hội, Quản trị) đến lợi nhuận doanh nghiệp. Dữ liệu dùng trong dự án được lấy từ <a href="https://www.kaggle.com/datasets/shriyashjagtap/esg-and-financial-performance-dataset" target="_blank" class="text-[#9B8EC7] hover:underline">ESG and Financial Performance Dataset</a></p>
 <h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📝 Tóm tắt dự án</h3>
@@ -71,7 +81,7 @@
 </ol>
 <p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Kết quả chính:</strong></p>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li>Các mô hình <strong class="font-bold text-gray-900">Linear/Ridge Regression</strong> cho thấy hiệu suất dự báo ổn định nhất ($R^2 /approx 0.999$).</li>
+<li>Các mô hình <strong class="font-bold text-gray-900">Linear/Ridge Regression</strong> cho thấy hiệu suất dự báo ổn định nhất ($R^2 \approx 0.999$).</li>
 <li>Dữ liệu lịch sử giá (đặc biệt là giá trễ và đường trung bình động - MA) đóng vai trò chủ đạo trong dự báo ngắn hạn, trong khi các yếu tố ESG có đóng góp không đáng kể trong khung dự báo giá hàng ngày.</li>
 <li>Tuy nhiên, các yếu tố ESG có tác động đáng kể đến <strong class="font-bold text-gray-900">lợi nhuận dài hạn</strong> của doanh nghiệp.</li>
 </ul>
@@ -93,44 +103,45 @@
 └── requirements.txt    # Các thư viện phụ thuộc
 </code></pre>
 <h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📊 Kết quả đánh giá mô hình (Tập kiểm thử)</h3>
-<table>
-<thead>
+<table class="min-w-full divide-y divide-gray-200 my-4 border">
+<thead class="bg-gray-50">
 <tr>
-<th>Mô hình</th>
-<th>MAE</th>
-<th>MSE</th>
-<th>$R^2$</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Mô hình</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MAE</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MSE</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">$R^2$</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>Linear Regression</td>
-<td>1.93</td>
-<td>15.46</td>
-<td>0.9993</td>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Linear Regression</td>
+<td class="px-6 py-4 whitespace-nowrap">1.93</td>
+<td class="px-6 py-4 whitespace-nowrap">15.46</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9993</td>
 </tr>
 <tr>
-<td>Ridge Regression</td>
-<td>1.93</td>
-<td>15.46</td>
-<td>0.9993</td>
+<td class="px-6 py-4 whitespace-nowrap">Ridge Regression</td>
+<td class="px-6 py-4 whitespace-nowrap">1.93</td>
+<td class="px-6 py-4 whitespace-nowrap">15.46</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9993</td>
 </tr>
 <tr>
-<td>Random Forest</td>
-<td>6.27</td>
-<td>583.35</td>
-<td>0.9718</td>
+<td class="px-6 py-4 whitespace-nowrap">Random Forest</td>
+<td class="px-6 py-4 whitespace-nowrap">6.27</td>
+<td class="px-6 py-4 whitespace-nowrap">583.35</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9718</td>
 </tr>
 <tr>
-<td>Gradient Boosting</td>
-<td>6.09</td>
-<td>528.93</td>
-<td>0.9745</td>
+<td class="px-6 py-4 whitespace-nowrap">Gradient Boosting</td>
+<td class="px-6 py-4 whitespace-nowrap">6.09</td>
+<td class="px-6 py-4 whitespace-nowrap">528.93</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9745</td>
 </tr>
 <tr>
-<td>XGBoost</td>
-<td>19.21</td>
-<td>10781.21</td>
-<td>0.4794</td>
+<td class="px-6 py-4 whitespace-nowrap">XGBoost</td>
+<td class="px-6 py-4 whitespace-nowrap">19.21</td>
+<td class="px-6 py-4 whitespace-nowrap">10781.21</td>
+<td class="px-6 py-4 whitespace-nowrap">0.4794</td>
 </tr>
 </tbody></table>
 <h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Đánh giá tác động ESG và Nghiên cứu nhân quả</h3>
@@ -167,8 +178,123 @@
 </li>
 </ul>
 <h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">🌐 Demo</h3>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Bạn có thể trải nghiệm thử các mô hình tại đây: <a href="https://www.google.com/search?q=https://huggingface.co/spaces/changle-2110/Stock-Prediction-Demo" target="_blank" class="text-[#9B8EC7] hover:underline">Stock Prediction Demo - Hugging Face Space</a><br>Đây là link github của dự án: <a href="https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main</a></p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Bạn có thể trải nghiệm thử các mô hình tại đây: <a href="https://huggingface.co/spaces/changle-2110/Stock-Prediction-Demo" target="_blank" class="text-[#9B8EC7] hover:underline">Stock Prediction Demo - Hugging Face Space</a><br>Đây là link github của dự án: <a href="https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main</a></p>
+            </div>
 
+            <!-- English Content -->
+            <div class="font-sans hidden" data-lang="en">
+<h1>Applying Machine Learning for Stock Price Forecasting and ESG Causal Analysis</h1>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">This is a complete research project on applying Machine Learning algorithms for daily stock price forecasting and using Double Machine Learning (DML) to analyze the causal impact of ESG (Environmental, Social, Governance) factors on corporate returns. The data used in the project is sourced from the <a href="https://www.kaggle.com/datasets/shriyashjagtap/esg-and-financial-performance-dataset" target="_blank" class="text-[#9B8EC7] hover:underline">ESG and Financial Performance Dataset</a>.</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📝 Project Summary</h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">This research focuses on two main objectives:</p>
+<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Stock Price Forecasting:</strong> Comparing the performance of Machine Learning models (Linear Regression, Ridge, Random Forest, Gradient Boosting, XGBoost) in forecasting adjusted closing prices.</li>
+<li><strong class="font-bold text-gray-900">Causal Inference:</strong> Using Double Machine Learning (DML) to elucidate the relationship between ESG Scores/ESG Risks and corporate returns (monthly/annually).</li>
+</ol>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Key Results:</strong></p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>The <strong class="font-bold text-gray-900">Linear/Ridge Regression</strong> models showed the most stable forecasting performance ($R^2 \approx 0.999$).</li>
+<li>Historical price data (especially lagged prices and moving averages - MA) play a dominant role in short-term forecasting, while ESG factors make an insignificant contribution in the daily price forecasting timeframe.</li>
+<li>However, ESG factors have a significant impact on the <strong class="font-bold text-gray-900">long-term returns</strong> of the business.</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">🛠 Technologies Used</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Language:</strong> Python</li>
+<li><strong class="font-bold text-gray-900">Platform:</strong> Google Colab</li>
+<li><strong class="font-bold text-gray-900">Core Libraries:</strong></li>
+<li><code>scikit-learn</code>: Implementing Linear, Ridge, Random Forest, and Gradient Boosting models.</li>
+<li><code>xgboost</code>: Implementing XGBoost.</li>
+<li><code>shap</code>: Explaining feature importance.</li>
+<li><code>DoubleML</code>: Performing causal inference.</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📂 Project Structure</h3>
+<pre class="bg-gray-50 p-4 rounded-lg overflow-x-auto text-sm font-mono text-gray-800 my-6 border border-gray-200"><code class="language-text">├── data/               # Financial &amp; ESG Data (needs configuration)
+├── models/             # Scripts for model training and evaluation
+├── notebooks/          # Jupyter Notebook files (EDA, Modeling, Causal Inference pipelines)
+├── README.md           # Project documentation
+└── requirements.txt    # Dependencies
+</code></pre>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📊 Model Evaluation Results (Test Set)</h3>
+<table class="min-w-full divide-y divide-gray-200 my-4 border">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MAE</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">MSE</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">$R^2$</th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Linear Regression</td>
+<td class="px-6 py-4 whitespace-nowrap">1.93</td>
+<td class="px-6 py-4 whitespace-nowrap">15.46</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9993</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Ridge Regression</td>
+<td class="px-6 py-4 whitespace-nowrap">1.93</td>
+<td class="px-6 py-4 whitespace-nowrap">15.46</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9993</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Random Forest</td>
+<td class="px-6 py-4 whitespace-nowrap">6.27</td>
+<td class="px-6 py-4 whitespace-nowrap">583.35</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9718</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">Gradient Boosting</td>
+<td class="px-6 py-4 whitespace-nowrap">6.09</td>
+<td class="px-6 py-4 whitespace-nowrap">528.93</td>
+<td class="px-6 py-4 whitespace-nowrap">0.9745</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">XGBoost</td>
+<td class="px-6 py-4 whitespace-nowrap">19.21</td>
+<td class="px-6 py-4 whitespace-nowrap">10781.21</td>
+<td class="px-6 py-4 whitespace-nowrap">0.4794</td>
+</tr>
+</tbody></table>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">ESG Impact Evaluation and Causal Research</h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">This study analyzes the integration of ESG scores and risks into stock price forecasting models, while using causal methods to assess the impact of ESG on corporate returns.</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Stock Price Forecasting</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Impact Factors:</strong> Using SHAP shows that forecasted stock prices are primarily driven by historical price data (especially 1-day lagged prices and moving averages). ESG variables contribute very little to short-term price forecasting capabilities.</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Causal Inference</h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Using the <strong class="font-bold text-gray-900">Double Machine Learning (DML)</strong> method to handle endogeneity issues, the study drew conclusions about the causal relationship between ESG and returns:</p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Impact of ESG Risk:</strong></p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Environmental (E):</strong> High environmental risk tends to generate higher returns (risk premium).</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Social (S):</strong> Social risk has a clear negative impact on business performance.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Governance (G):</strong> Governance risk has a negative but insignificant impact.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Impact of ESG Score:</strong></p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Improvements in scores across all 3 pillars (E, S, G) lead directly to an increase in average corporate returns.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Short-term (Monthly):</strong> The Governance (G) score has the strongest influence as the market reacts quickly to changes in shareholder power.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Long-term (Annually):</strong> Environmental (E) and Social (S) scores show a larger and clearer impact, indicating that sustainable development strategies require time to generate specific economic value.</p>
+</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">General Conclusion</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ESG indicators are <strong class="font-bold text-gray-900">not suitable</strong> for daily (short-term) stock price forecasting because short-term stock prices are heavily dominated by technical variables.</p>
+</li>
+<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4">ESG has a <strong class="font-bold text-gray-900">significant and positive impact on long-term returns</strong> (monthly/annual returns), making it a key factor for sustainable investment decisions.</p>
+</li>
+</ul>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">🌐 Demo</h3>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">You can try the models here: <a href="https://huggingface.co/spaces/changle-2110/Stock-Prediction-Demo" target="_blank" class="text-[#9B8EC7] hover:underline">Stock Prediction Demo - Hugging Face Space</a><br>Here is the project's GitHub link: <a href="https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/Applying-Machine-Learning-Algorithms-to-Stock-Price-and-Causal-Analysis-of-ESG-Effects-on-Returns/tree/main</a></p>
             </div>
         </div>
-    </main>undefined
+    </main>
+
+    <script src="lang-toggle.js"></script>
+</body>
+</html>

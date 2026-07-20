@@ -33,13 +33,21 @@
 </head>
 <body class="font-sans text-dark antialiased bg-white flex flex-col min-h-screen">
 
-    <!-- Simple Navbar -->
+    <!-- Navbar -->
     <nav class="w-full bg-[#9B8EC7] text-white py-4 px-4 md:px-12 fixed top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
-            <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
-                <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.html#projects" class="text-sm font-medium uppercase tracking-wide flex items-center hover:text-gray-200 transition">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại</span>
+                    <span data-lang="en" class="hidden">Back</span>
+                </a>
+                <button id="lang-toggle" class="lang-toggle-btn px-3 py-1.5 text-xs font-bold uppercase tracking-wider border-2 border-white/70 rounded-full hover:bg-white hover:text-[#9B8EC7] transition-all duration-300 flex items-center gap-1.5" title="Switch language">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -49,62 +57,92 @@
             <!-- Project Header -->
             <div class="mb-10 pb-6 border-b border-gray-200">
                 <a href="index.html#projects" class="inline-flex items-center text-primary hover:text-secondary mb-6 transition font-medium">
-                    <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại trang chủ
+                    <i class="fa-solid fa-arrow-left mr-2"></i>
+                    <span data-lang="vi">Quay lại trang chủ</span>
+                    <span data-lang="en" class="hidden">Back to homepage</span>
                 </a>
-                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Exploring the impact of Perceived Value in Vietnamese Tourism (ML and Smart PLS)</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">Dashboard on Excel</h1>
                 <div class="flex items-center text-gray-500 font-medium">
                     <i class="fa-solid fa-screwdriver-wrench mr-2 text-primary"></i> 
-                    Công cụ: Big Data Mining, Structural Modeling
+                    <span data-lang="vi">Công cụ: Excel, Dashboard, Data Visualization</span>
+                    <span data-lang="en" class="hidden">Tools: Excel, Dashboard, Data Visualization</span>
                 </div>
             </div>
 
-            <!-- Markdown Content Area -->
-            <!-- Bạn có thể copy HTML đã chuyển từ Markdown và dán vào bên trong div này -->
-            <div class="font-sans">
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📄 Tên dự án</h3>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Exploring the Impact of Perceived Value on Tourists’ Intention to Return to Vietnamese Tourist Destinations: A Big Data Mining and Linear Structural Modeling Approach</strong></p>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📝 Tóm tắt dự án</h3>
-<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Trong bối cảnh ngành du lịch Việt Nam hậu đại dịch cạnh tranh gay gắt, việc giữ chân du khách là yếu tố sống còn. Nghiên cứu này khám phá tác động của bốn chiều giá trị cảm nhận (Chức năng, Cảm xúc, Tri thức, Xã hội) đến ý định quay lại của du khách thông qua dữ liệu đánh giá trực tuyến (TripAdvisor và Google Maps). Kết quả cho thấy các yếu tố giá trị cảm nhận giải thích tới <strong class="font-bold text-gray-900">65.6%</strong> sự biến động của ý định quay lại, trong đó <strong class="font-bold text-gray-900">Giá trị cảm xúc (Hedonic value)</strong> là nhân tố quan trọng nhất. Nghiên cứu cung cấp cơ sở thực nghiệm giúp các nhà quản trị tối ưu hóa trải nghiệm du khách và xây dựng chiến lược giữ chân khách hiệu quả hơn.</p>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">🛠 Công nghệ và công cụ</h3>
+            <!-- Vietnamese Content -->
+            <div class="font-sans" data-lang="vi">
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Thời gian: Tháng 5 năm 2024</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Làm quen với Dashboard trên Excel</h3>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Thu thập dữ liệu:</strong> Python (Selenium, Pandas) để cào dữ liệu từ TripAdvisor và Google Maps.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Tiền xử lý:</strong> Helsinki-NLP (dịch máy đa ngôn ngữ), tách câu tự động.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Khai phá dữ liệu:</strong></p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">LDA (Latent Dirichlet Allocation):</strong> Trích xuất chủ đề ẩn từ văn bản.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Logistic Regression:</strong> Phân loại chủ đề cho các mệnh đề đánh giá.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Phân tích cảm xúc:</strong> <strong class="font-bold text-gray-900">RoBERTa</strong> (Transformer-based model) để chấm điểm cảm xúc.</p>
-</li>
-<li><p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">Phân tích mô hình:</strong> <strong class="font-bold text-gray-900">SmartPLS (PLS-SEM)</strong> để kiểm định giả thuyết và mô hình cấu trúc.</p>
-</li>
+<li><strong class="font-bold text-gray-900">Công cụ/Công nghệ:</strong> Excel (Power Query, Pivot Table, Pivot Chart).</li>
 </ul>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">📊 Mô hình nghiên cứu</h3>
-<img src="assets/projects/Exploring the impact of Perceived Value in Vietnamese Tourism ML and Smart PLS/hinh1.jpg" alt="Minh họa dự án" class="w-full h-auto rounded-lg shadow-md my-6"> 
-Nghiên cứu xây dựng mô hình dựa trên bốn chiều giá trị cảm nhận (biến độc lập) tác động đến ý định quay lại (biến phụ thuộc):<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Giá trị chức năng (Functional Value):</strong> Chi phí, chất lượng dịch vụ, môi trường.</li>
-<li><strong class="font-bold text-gray-900">Giá trị cảm xúc (Hedonic Value):</strong> Sự vui thích, thư giãn, trải nghiệm đáng nhớ.</li>
-<li><strong class="font-bold text-gray-900">Giá trị tri thức (Epistemic Value):</strong> Học hỏi, khám phá văn hóa, di sản.</li>
-<li><strong class="font-bold text-gray-900">Giá trị quan hệ xã hội (Social Relationship Value):</strong> Sự kết nối và cảm nhận về mật độ đông đúc (Tourist Crowding).</li>
-</ol>
-<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">💡 Kết quả chính</h3>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">CHI TIẾT DỰ ÁN</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">1. Đề bài:</strong>  Xây dựng Dashboard cho người quản lý nhân sự (HR manager). Công ty được thiết lập là 1 công ty dịch vụ bán lẻ có 11 tầng, quy mô vừa.<br><strong class="font-bold text-gray-900">Mục đích sử dụng:</strong> Xem được tổng số nhân viên, số phòng ban, tỷ lệ thu nhập và hiệu suất làm việc.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">2. Tính năng chính:</strong></p>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Khả năng giải thích:</strong> Mô hình đạt $R^{2} = 0.656$, chứng tỏ mức độ giải thích tốt đối với ý định quay lại của du khách.</li>
-<li><strong class="font-bold text-gray-900">Xếp hạng tác động:</strong></li>
+<li>Hiển thị 3 chỉ số quan trọng (KPIs): Tổng số nhân viên, Tổng số phòng ban, và Tổng thu nhập.</li>
+<li>Biểu đồ cột đánh giá tỷ lệ hiệu suất làm việc của từng phòng ban.</li>
+<li>Biểu đồ phân tán (Scatterplot) thể hiện mối tương quan giữa thu nhập và tuổi tác.</li>
+<li>Biểu đồ tròn (Pie chart) thể hiện tỷ lệ giới tính (Gender).</li>
+<li>Biểu đồ cột (Column chart) thể hiện số lượng nhân viên ở từng phòng ban.</li>
+<li>Slicers (Bộ lọc dữ liệu) dùng để lọc theo tầng (Floor) và Giới tính (Gender).</li>
 </ul>
-<ol class="list-decimal ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Giá trị cảm xúc (Hedonic value):</strong> $/beta = 0.352$ (Tác động mạnh nhất).</li>
-<li><strong class="font-bold text-gray-900">Giá trị chức năng (Functional value):</strong> $/beta = 0.332$.</li>
-<li><strong class="font-bold text-gray-900">Giá trị quan hệ xã hội (Social relationship value):</strong> $/beta = 0.154$.</li>
-<li><strong class="font-bold text-gray-900">Giá trị tri thức (Epistemic value):</strong> $/beta = 0.104$.</li>
-</ol>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Nguồn dữ liệu: <a href="https://www.kaggle.com/datasets/saife245/employee-dataset/data" target="_blank" class="text-[#9B8EC7] hover:underline">Employee Dataset (Kaggle)</a></p>
+<img src="assets/projects/Dashboard/hinh1.jpg" alt="Minh họa dự án" class="w-full h-auto rounded-lg shadow-md my-6">
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">3. Kết quả phân tích (Từ Dashboard):</h4>
 <ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
-<li><strong class="font-bold text-gray-900">Hàm ý quản trị:</strong> Cần ưu tiên nâng cao các hoạt động giàu tính trải nghiệm cảm xúc (lễ hội, du lịch đêm) song song với việc kiểm soát mật độ du khách và cải thiện chất lượng hạ tầng cơ bản để nâng cao sức cạnh tranh.<br>Link git của dự án:<a href="https://github.com/hatrang-ship-it/The-Impact-of-Perceived-Value-on-Tourists-Intention-to-Vietnamese-Tourist-Destinations-LDA-and-ML/tree/main" target="_blank" class="text-[#9B8EC7] hover:underline">https://github.com/hatrang-ship-it/The-Impact-of-Perceived-Value-on-Tourists-Intention-to-Vietnamese-Tourist-Destinations-LDA-and-ML/tree/main</a></li>
+<li>Có tổng cộng 10 phòng ban. Phòng "Support" (Hỗ trợ) có số lượng nhân viên đông nhất (hơn 100 người), trong khi phòng "HR" (Nhân sự) ít nhất (dưới 30 người).</li>
+<li>Hiệu suất làm việc (Performance) chung ở mức trung bình. Các phòng ban có mức lương trả cao nhất lần lượt là: IT, Engineering, Sales và Support (Điều thú vị là Support là phòng duy nhất dẫn đầu ở cả 2 chỉ số: số lượng nhân viên và thu nhập cao).</li>
+<li>Biểu đồ phân tán cho thấy KHÔNG có mối quan hệ tuyến tính rõ rệt giữa Thu nhập và Tuổi tác ($R^2$ = 0.1221).</li>
+<li>Đa số nhân viên trong công ty là Nam giới (Male).</li>
 </ul>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">4. Khuyến nghị:</h4>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Cần tiếp tục quan sát xem liệu độ tuổi có thực sự không ảnh hưởng đến thu nhập như dữ liệu hiện tại hay không, từ đó có chính sách lương thưởng hợp lý.</li>
+<li>Cải thiện các phúc lợi dành cho nhân viên nữ để cân bằng lại tỷ lệ giới tính trong công ty.</li>
+<li>Tiếp tục duy trì và hỗ trợ các phòng ban đang hoạt động hiệu quả.</li>
+</ul>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Dưới đây là link chi tiết Dashboard: <a href="https://docs.google.com/spreadsheets/d/1Qy8z7Z5Z60kL2QY6n-2_Y0-55P7o2XlJ/edit?gid=663188540#gid=663188540" target="_blank" class="text-[#9B8EC7] hover:underline">https://docs.google.com/spreadsheets/d/1Qy8z7Z5Z60kL2QY6n-2_Y0-55P7o2XlJ/edit?gid=663188540#gid=663188540</a></p>
+            </div>
 
+            <!-- English Content -->
+            <div class="font-sans hidden" data-lang="en">
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Timeline: May 2024</p>
+<h3 class="text-xl font-medium text-gray-800 mt-6 mb-3">Getting Started with Excel Dashboards</h3>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li><strong class="font-bold text-gray-900">Tools/Technologies:</strong> Excel (Power Query, Pivot Table, Pivot Chart).</li>
+</ul>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">PROJECT DETAILS</h4>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">1. Problem Statement:</strong> Build a Dashboard for an HR manager. The company is set up as a mid-sized retail service company with 11 floors.<br><strong class="font-bold text-gray-900">Purpose:</strong> To view the total number of employees, number of departments, income rate, and working performance.</p>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4"><strong class="font-bold text-gray-900">2. Key Features:</strong></p>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Displays 3 Key Performance Indicators (KPIs): Total Employees, Total Departments, and Total Income.</li>
+<li>Column chart assessing the working performance rate of each department.</li>
+<li>Scatterplot illustrating the correlation between income and age.</li>
+<li>Pie chart showing the gender ratio.</li>
+<li>Column chart displaying the number of employees in each department.</li>
+<li>Slicers for filtering data by Floor and Gender.</li>
+</ul>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Data Source: <a href="https://www.kaggle.com/datasets/saife245/employee-dataset/data" target="_blank" class="text-[#9B8EC7] hover:underline">Employee Dataset (Kaggle)</a></p>
+<img src="assets/projects/Dashboard/hinh1.jpg" alt="Project illustration" class="w-full h-auto rounded-lg shadow-md my-6">
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">3. Analysis Results (From Dashboard):</h4>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>There are a total of 10 departments. The "Support" department has the largest number of employees (over 100 people), while "HR" has the fewest (under 30 people).</li>
+<li>Overall working performance is average. The departments with the highest paid salaries are: IT, Engineering, Sales, and Support (Interestingly, Support is the only department leading in both metrics: large headcount and high income).</li>
+<li>The scatterplot shows NO clear linear relationship between Income and Age ($R^2$ = 0.1221).</li>
+<li>The majority of employees in the company are Male.</li>
+</ul>
+<h4 class="text-lg font-medium text-gray-800 mt-4 mb-2">4. Recommendations:</h4>
+<ul class="list-disc ml-6 mb-4 space-y-2 text-gray-700">
+<li>Continue to observe whether age truly does not affect income as the current data suggests, to establish a reasonable compensation policy.</li>
+<li>Improve benefits for female employees to balance the gender ratio in the company.</li>
+<li>Continue to maintain and support departments that are operating effectively.</li>
+</ul>
+<p class="text-base font-normal text-gray-700 leading-relaxed mb-4">Here is the detailed Dashboard link: <a href="https://docs.google.com/spreadsheets/d/1Qy8z7Z5Z60kL2QY6n-2_Y0-55P7o2XlJ/edit?gid=663188540#gid=663188540" target="_blank" class="text-[#9B8EC7] hover:underline">https://docs.google.com/spreadsheets/d/1Qy8z7Z5Z60kL2QY6n-2_Y0-55P7o2XlJ/edit?gid=663188540#gid=663188540</a></p>
             </div>
         </div>
-    </main>undefined
+    </main>
+
+    <script src="lang-toggle.js"></script>
+</body>
+</html>

@@ -45,7 +45,7 @@ Dưới đây là toàn bộ thông tin nội dung cần đưa vào Portfolio:
 * **Github:** hatrang-ship-it
 
 ### Giới thiệu bản thân (About Me)
-Em là một người ham học hỏi, có trách nhiệm trong công việc và đam mê phân tích dữ liệu đặc biệt trong lĩnh vực tài chính. Qua các môn học trên trường, em có kinh nghiệm phân tích báo cáo tài chính và có nền tảng tốt về phân tích và trực quan hóa dữ liệu, xây dựng mô hình học máy, học sâu. Em luôn sẵn sàng đón nhận những thử thách mới để không ngừng trau dồi chuyên môn thông qua các dự án thực tế và đóng góp trực tiếp vào sự phát triển của doanh nghiệp.
+Em là một người ham học hỏi, có trách nhiệm trong công việc và đam mê phân tích dữ liệu. Qua các môn học trên trường, em có kinh nghiệm phân tích báo cáo tài chính và có nền tảng tốt về phân tích và trực quan hóa dữ liệu, xây dựng mô hình học máy, học sâu. Em luôn sẵn sàng đón nhận những thử thách mới để không ngừng trau dồi chuyên môn thông qua các dự án thực tế và đóng góp trực tiếp vào sự phát triển của doanh nghiệp.
 
 ### Học vấn (Education)
 * **Trường:** Quốc Tế - ĐHQG Hà Nội (VNU-IS) (2022 - 2026)
