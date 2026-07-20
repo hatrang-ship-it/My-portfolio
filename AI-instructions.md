@@ -49,7 +49,7 @@ Em là một người ham học hỏi, có trách nhiệm trong công việc và
 
 ### Học vấn (Education)
 * **Trường:** Quốc Tế - ĐHQG Hà Nội (VNU-IS) (2022 - 2026)
-* **Ngành:** Phân tích dữ liệu kinh doanh chuyên sâu tài chính
+* **Ngành:** Phân tích dữ liệu kinh doanh
 * **GPA tích lũy:** 3.66/4.
 
 ### Kỹ năng (Skills)
