@@ -38,34 +38,49 @@
     <!-- Navbar -->
     <nav class="w-full bg-[#9B8EC7] text-white py-6 px-4 md:px-12 fixed top-0 z-50 shadow-md transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto flex justify-between items-center gap-8">
-            <a href="#" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition">TRANG LÊ</a>
+            <a href="#" class="text-2xl font-bold tracking-wider hover:text-gray-200 transition" data-i18n="nav_brand">TRANG LÊ</a>
             
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-wide flex-wrap">
-                <li><a href="#about" class="hover:text-gray-200 transition">Giới thiệu</a></li>
-                <li><a href="#skills" class="hover:text-gray-200 transition">Kỹ năng</a></li>
-                <li><a href="#experience" class="hover:text-gray-200 transition">Kinh nghiệm</a></li>
-                <li><a href="#projects" class="hover:text-gray-200 transition">Dự án</a></li>
-                <li><a href="#certificates" class="hover:text-gray-200 transition">Chứng chỉ</a></li>
-                <li><a href="#contact" class="hover:text-gray-200 transition">Liên hệ</a></li>
-            </ul>
+            <div class="hidden md:flex items-center gap-6">
+                <ul class="flex space-x-6 text-sm font-medium uppercase tracking-wide flex-wrap">
+                    <li><a href="#about" class="hover:text-gray-200 transition" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="#education" class="hover:text-gray-200 transition" data-i18n="nav_education">Học vấn</a></li>
+                    <li><a href="#skills" class="hover:text-gray-200 transition" data-i18n="nav_skills">Kỹ năng</a></li>
+                    <li><a href="#experience" class="hover:text-gray-200 transition" data-i18n="nav_experience">Kinh nghiệm</a></li>
+                    <li><a href="#projects" class="hover:text-gray-200 transition" data-i18n="nav_projects">Dự án</a></li>
+                    <li><a href="#certificates" class="hover:text-gray-200 transition" data-i18n="nav_certificates">Chứng chỉ</a></li>
+                    <li><a href="#contact" class="hover:text-gray-200 transition" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle" class="lang-toggle-btn ml-2 px-3 py-1.5 text-xs font-bold uppercase tracking-wider border-2 border-white/70 rounded-full hover:bg-white hover:text-[#9B8EC7] transition-all duration-300 flex items-center gap-1.5" title="Switch language">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+            </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="flex items-center gap-3 md:hidden">
+                <button id="lang-toggle-mobile" class="lang-toggle-btn px-2.5 py-1 text-xs font-bold uppercase tracking-wider border-2 border-white/70 rounded-full hover:bg-white hover:text-[#9B8EC7] transition-all duration-300 flex items-center gap-1" title="Switch language">
+                    <i class="fa-solid fa-globe text-xs"></i>
+                    <span id="lang-label-mobile">EN</span>
+                </button>
+                <button class="text-white text-2xl" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-primary text-white z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
         <ul class="flex flex-col space-y-6 text-center text-xl text-white font-medium uppercase tracking-wide">
-            <li><a href="#about" class="mobile-link">Giới thiệu</a></li>
-            <li><a href="#skills" class="mobile-link">Kỹ năng</a></li>
-            <li><a href="#experience" class="mobile-link">Kinh nghiệm</a></li>
-            <li><a href="#projects" class="mobile-link">Dự án</a></li>
-            <li><a href="#certificates" class="mobile-link">Chứng chỉ</a></li>
-            <li><a href="#contact" class="mobile-link">Liên hệ</a></li>
+            <li><a href="#about" class="mobile-link" data-i18n="nav_about">Giới thiệu</a></li>
+            <li><a href="#education" class="mobile-link" data-i18n="nav_education">Học vấn</a></li>
+            <li><a href="#skills" class="mobile-link" data-i18n="nav_skills">Kỹ năng</a></li>
+            <li><a href="#experience" class="mobile-link" data-i18n="nav_experience">Kinh nghiệm</a></li>
+            <li><a href="#projects" class="mobile-link" data-i18n="nav_projects">Dự án</a></li>
+            <li><a href="#certificates" class="mobile-link" data-i18n="nav_certificates">Chứng chỉ</a></li>
+            <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Liên hệ</a></li>
         </ul>
     </div>
 
@@ -86,17 +101,17 @@
 
                 <!-- Text Content -->
                 <div class="text-center md:text-left flex flex-col justify-center">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight" data-i18n-html="hero_greeting">
                         Xin chào, tôi là <br class="hidden md:block"> <span class="text-gray-900">Lê Hà Trang!</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-light">
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-light" data-i18n-html="hero_desc">
                         Sinh viên năm cuối ngành Phân tích dữ liệu Kinh Doanh <br>
                         Trường Quốc Tế - Đại Học Quốc Gia Hà Nội
                     </p>
                     
                     <div class="flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-start gap-4 md:gap-6 uppercase text-sm font-semibold tracking-wider">
                         <div class="flex items-center gap-2">
-                            <span>Kết nối với tôi</span>
+                            <span data-i18n="hero_connect">Kết nối với tôi</span>
                             <i class="fa-solid fa-chevron-right text-xs hidden md:block"></i>
                         </div>
                         <div class="flex flex-col md:flex-row flex-wrap items-center gap-4 normal-case">
@@ -116,16 +131,65 @@
 
         <!-- Placeholder for About Me (to show scrolling) -->
         <section id="about" class="py-20 px-4 max-w-5xl mx-auto text-center">
-            <h2 class="text-[#9B8EC7] text-3xl font-bold mb-6 uppercase tracking-wider">Tôi là ai?</h2>
-            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+            <h2 class="text-[#9B8EC7] text-3xl font-bold mb-6 uppercase tracking-wider" data-i18n="about_title">Tôi là ai?</h2>
+            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto" data-i18n="about_text">
                 Em là một người ham học hỏi, có trách nhiệm trong công việc và đam mê phân tích dữ liệu đặc biệt trong lĩnh vực tài chính. Qua các môn học trên trường, em có kinh nghiệm phân tích báo cáo tài chính và có nền tảng tốt về phân tích và trực quan hóa dữ liệu, xây dựng mô hình học máy, học sâu. Em luôn sẵn sàng đón nhận những thử thách mới để không ngừng trau dồi chuyên môn thông qua các dự án thực tế và đóng góp trực tiếp vào sự phát triển của doanh nghiệp.
             </p>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 px-4 bg-light">
+        <!-- Education Section -->
+        <section id="education" class="py-20 px-4 bg-light">
             <div class="max-w-5xl mx-auto">
-                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Kỹ năng</h2>
+                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider" data-i18n="education_title">Học vấn</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="education-card bg-white rounded-2xl shadow-lg border-t-4 border-primary overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                        <!-- Card Header -->
+                        <div class="bg-gradient-to-r from-[#9B8EC7] to-[#b8aed9] p-6 text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold" data-i18n="edu_school">Trường Quốc Tế - ĐHQG Hà Nội (VNU-IS)</h3>
+                                    <p class="text-white/80 text-sm font-medium"><i class="fa-regular fa-calendar-days mr-1"></i> 2022 - 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="p-6 space-y-5">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-book-open text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide" data-i18n="edu_major_label">Ngành học</p>
+                                    <p class="text-dark font-semibold text-lg" data-i18n="edu_major">Phân tích dữ liệu kinh doanh chuyên sâu tài chính</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-star text-primary"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide" data-i18n="edu_gpa_label">GPA tích lũy</p>
+                                    <div class="flex items-center gap-3 mt-1">
+                                        <span class="text-2xl font-bold text-primary">3.66<span class="text-base text-gray-400 font-normal">/4</span></span>
+                                    </div>
+                                    <div class="mt-2 w-full bg-gray-100 rounded-full h-2.5 overflow-hidden">
+                                        <div class="bg-gradient-to-r from-[#9B8EC7] to-[#b8aed9] h-full rounded-full transition-all duration-1000 ease-out" style="width: 91.5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider" data-i18n="skills_title">Kỹ năng</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Soft Skills -->
                     <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-primary hover:shadow-md transition transform hover:-translate-y-1">
@@ -171,7 +235,7 @@
 
         <!-- Experience Section -->
         <section id="experience" class="py-20 px-4 max-w-5xl mx-auto">
-            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Kinh nghiệm làm việc</h2>
+            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider" data-i18n="experience_title">Kinh nghiệm làm việc</h2>
             <div class="relative border-l-2 border-primary ml-4 md:ml-0 md:mx-auto md:w-2/3">
                 
                 <!-- Experience 1 -->
@@ -201,7 +265,7 @@
         <!-- Projects Section -->
         <section id="projects" class="py-20 px-4 bg-light">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Dự án</h2>
+                <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider" data-i18n="projects_title">Dự án</h2>
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Projects will be rendered here via JS -->
                 </div>
@@ -210,7 +274,7 @@
 
         <!-- Certificates & Awards Section -->
         <section id="certificates" class="py-20 px-4 max-w-6xl mx-auto">
-            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider">Chứng chỉ & Giải thưởng</h2>
+            <h2 class="text-primary text-3xl font-bold mb-12 text-center uppercase tracking-wider" data-i18n="certs_title">Chứng chỉ & Giải thưởng</h2>
             
             <div class="mb-16">
                 <h3 class="text-2xl font-semibold mb-8 text-secondary border-b-2 border-gray-200 pb-2 inline-block">Chứng chỉ</h3>
@@ -236,7 +300,7 @@
     <!-- Footer -->
     <footer class="bg-primary text-white py-8 px-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-sm text-gray-200">
+            <p class="text-sm text-gray-200" data-i18n="footer_copy">
                 &copy; 2026 Lê Hà Trang. Mọi quyền được bảo lưu.
             </p>
             <div class="flex space-x-4 text-lg">
@@ -245,6 +309,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4 cursor-pointer transition-opacity duration-300">
+        <button id="modal-close-btn" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 bg-white/10 hover:bg-white/30 backdrop-blur-sm text-white text-2xl rounded-full flex items-center justify-center transition-all duration-300 z-10" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="modal-image" src="" alt="Certificate preview" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default modal-image-animate">
+    </div>
 
     <!-- Custom Script -->
     <script src="data.js"></script>
