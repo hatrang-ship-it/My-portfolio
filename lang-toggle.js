@@ -27,17 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langLabelMobile) langLabelMobile.textContent = nextLang;
     }
 
-    function setLanguage(lang) {
+    window.setLanguageGlobal = function(lang) {
         localStorage.setItem('lang', lang);
         document.documentElement.setAttribute('lang', lang);
         applyLangBlocks(lang);
         updateToggleLabels(lang);
-    }
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+    };
 
-    function toggleLanguage() {
+    function toggleLanguage(e) {
+        if (e) e.preventDefault();
         const current = localStorage.getItem('lang') || 'vi';
         const next = current === 'vi' ? 'en' : 'vi';
-        setLanguage(next);
+        window.setLanguageGlobal(next);
     }
 
     // Attach toggle events
@@ -46,6 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply saved language on load
     const savedLang = localStorage.getItem('lang') || 'vi';
-    applyLangBlocks(savedLang);
-    updateToggleLabels(savedLang);
+    window.setLanguageGlobal(savedLang);
 });

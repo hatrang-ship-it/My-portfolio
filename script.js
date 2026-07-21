@@ -76,35 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update toggle button labels
-        const nextLang = lang === 'vi' ? 'EN' : 'VI';
-        const langLabel = document.getElementById('lang-label');
-        const langLabelMobile = document.getElementById('lang-label-mobile');
-        if (langLabel) langLabel.textContent = nextLang;
-        if (langLabelMobile) langLabelMobile.textContent = nextLang;
-
-        // Save to localStorage
-        localStorage.setItem('lang', lang);
-        document.documentElement.setAttribute('lang', lang);
     }
 
-    function toggleLanguage() {
-        const current = localStorage.getItem('lang') || 'vi';
-        const next = current === 'vi' ? 'en' : 'vi';
-        setLanguage(next);
-    }
-
-    // Attach toggle events
-    const langToggle = document.getElementById('lang-toggle');
-    const langToggleMobile = document.getElementById('lang-toggle-mobile');
-    if (langToggle) langToggle.addEventListener('click', toggleLanguage);
-    if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLanguage);
+    document.addEventListener('languageChanged', (e) => {
+        setLanguage(e.detail.lang);
+    });
 
     // Restore saved language on load
     const savedLang = localStorage.getItem('lang') || 'vi';
-    if (savedLang !== 'vi') {
-        setLanguage(savedLang);
-    }
+    setLanguage(savedLang);
 
     // =============================================
     // --- NAVBAR & MOBILE MENU ---
